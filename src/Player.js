@@ -30,6 +30,8 @@ const Player = props => {
             <div className="progress__bar" style={progressBarStyles} />
           </div>
         </div>
+        <div className="songlist">List of songs: {props.tracks}</div>
+        <div className="artistlist">Artists: {props.artist}</div>
         <div className="background" style={backgroundStyles} />{" "}
       </div>
     </div>
