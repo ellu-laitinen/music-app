@@ -42,7 +42,7 @@ class App extends Component {
   getCurrentlyPlaying(token) {
     // Make a call using the token
     $.ajax({
-      url: "https://api.spotify.com/v1/search?q=year%3A1977&type=track&market=US&limit=10",
+      url: "https://api.spotify.com/v1/search?q=year%3A1996&type=track&market=US&limit=10",
       type: "GET",
       beforeSend: xhr => {
         xhr.setRequestHeader("Authorization", "Bearer " + token);
@@ -74,9 +74,9 @@ class App extends Component {
               return b.name
             })
           })
-          //  item: data.item,
-          //  is_playing: data.is_playing,
-          //   progress_ms: data.progress_ms
+          /*  item: data.item,
+           is_playing: data.is_playing,
+           progress_ms: data.progress_ms */
         });
       }
     });

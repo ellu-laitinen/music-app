@@ -15,10 +15,10 @@ const Player = props => {
   return (
     <div className="App">
       <div className="main-wrapper">
-        <div className="now-playing__img">
+        {/* <div className="now-playing__img">
           <img src={props.item.album.images[0].url} alt="album cover" />
-        </div>
-        <div className="now-playing__side">
+        </div> */}
+        {/*        <div className="now-playing__side">
           <div className="now-playing__name">{props.item.name}</div>
           <div className="now-playing__artist">
             {props.item.artists[0].name}
@@ -29,7 +29,7 @@ const Player = props => {
           <div className="progress">
             <div className="progress__bar" style={progressBarStyles} />
           </div>
-        </div>
+        </div> */}
         <div className="songlist">List of songs: {props.tracks}</div>
         <div className="artistlist">Artists: {props.artist}</div>
         <div className="background" style={backgroundStyles} />{" "}
