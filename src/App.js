@@ -40,17 +40,19 @@ class App extends Component {
   getCurrentlyPlaying(token) {
     // Make a call using the token
     $.ajax({
-      url: "https://api.spotify.com/v1/me/player",
+      url: "https://api.spotify.com/v1/search?q=year%3A1977&type=track&market=US&limit=10",
       type: "GET",
       beforeSend: xhr => {
         xhr.setRequestHeader("Authorization", "Bearer " + token);
       },
       success: data => {
-        this.setState({
-          item: data.item,
-          is_playing: data.is_playing,
-          progress_ms: data.progress_ms
-        });
+        const song = data.tracks;
+        console.log(song)
+        //this.setState({
+        //  item: data.item,
+        //  is_playing: data.is_playing,
+       //   progress_ms: data.progress_ms
+      //  });
       }
     });
   }
@@ -135,6 +137,5 @@ function App() {
     </div>
   );
 }
-
 export default App;
 */
