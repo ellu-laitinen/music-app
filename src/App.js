@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import { authEndpoint, clientId, redirectUri, scopes } from "./config";
+import { authEndpoint, clientId, redirectUri, scopes } from "./Config";
 import hash from "./hash";
 import Player from "./Player";
 import logo from './logo.svg';
@@ -46,13 +46,27 @@ class App extends Component {
         xhr.setRequestHeader("Authorization", "Bearer " + token);
       },
       success: data => {
-        const song = data.tracks;
-        console.log(song)
+        const song = data.tracks.items.map(function (i) {
+          console.log(i.name)
+          return i.name
+        });
+        /* console.log(song) */
+
+        const artist = data.tracks.items.map(function (i) {
+          /* console.log(i.artists) */
+          return i.artists.map(function (b) {
+            console.log(b.name)
+            return b.name
+          })
+
+        })
+
+        /* console.log(artist) */
         //this.setState({
         //  item: data.item,
         //  is_playing: data.is_playing,
-       //   progress_ms: data.progress_ms
-      //  });
+        //   progress_ms: data.progress_ms
+        //  });
       }
     });
   }
@@ -80,6 +94,7 @@ class App extends Component {
             />
           )}
         </header>
+
       </div>
     );
   }
