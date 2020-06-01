@@ -6,7 +6,7 @@ import Player from "./Player";
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+class App_old extends Component {
   constructor() {
     super();
     this.state = {
@@ -42,7 +42,7 @@ class App extends Component {
   getSongs(token) {
     // Make a call using the token
     $.ajax({
-      url: "https://api.spotify.com/v1/search?q=year%3A1987&type=track&market=US&limit=10",
+      url: "https://api.spotify.com/v1/search?q=year%3A1985&type=track&market=US&limit=10",
       type: "GET",
       beforeSend: xhr => {
         xhr.setRequestHeader("Authorization", "Bearer " + token);
@@ -115,7 +115,7 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App_old;
 
 
 
