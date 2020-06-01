@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, useState} from "react";
+
 import $ from "jquery";
 import { authEndpoint, clientId, redirectUri, scopes } from "./Config";
 import hash from "./hash";
@@ -10,6 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      searchedYear: null,
       token: null,
       item: {
         album: {
@@ -39,6 +41,20 @@ class App extends Component {
     }
   }
 
+  // const [textLine, setTextLine] = useState("Please select a year and click the button!");
+
+
+ searchYear = () => {
+ console.log("This was clicked");
+ let searchingYear = document.getElementById("year").value;
+ console.log(searchingYear);  
+ this.setState({
+   searchedYear: searchingYear
+ });
+ 
+//  setTextLine("Here is your playlist for the year " + searchedYear +", enjoy!")
+ 
+};
   getCurrentlyPlaying(token) {
     // Make a call using the token
     $.ajax({
@@ -96,7 +112,15 @@ class App extends Component {
               Login to Spotify
             </a>
           )}
-          {this.state.token && (
+          {this.state.token && ( <div>
+            <div className="searchContainer">
+            <h3>Search bar thingy stuff here</h3>
+            <div>
+            <input type="number" id="year" defaultValue= "1990"></input>
+            <button className="searchButton" onClick={this.searchYear}>Get your playlist!</button>
+            </div>
+            <div className="enjoyBanner"><p>Wiiiii{this.state.searchedYear}</p></div>
+        </div>
             <Player
               item={this.state.item}
               is_playing={this.state.is_playing}
@@ -104,6 +128,7 @@ class App extends Component {
               tracks={this.state.tracks}
               artist={this.state.artist}
             />
+            </div>
           )}
         
 
