@@ -2,15 +2,15 @@ import React from "react";
 import "./Player.css";
 
 const Player = props => {
-  const backgroundStyles = {
-    backgroundImage: `url(${
-      props.item.album.images[0].url
-      })`,
-  };
-
-  const progressBarStyles = {
-    width: (props.progress_ms * 100 / props.item.duration_ms) + '%'
-  };
+  /*   const backgroundStyles = {
+      backgroundImage: `url(${
+        props.item.album.images[0].url
+        })`,
+    }; */
+  /* 
+    const progressBarStyles = {
+      width: (props.progress_ms * 100 / props.item.duration_ms) + '%'
+    }; */
 
   return (
     <div className="App">
@@ -32,7 +32,7 @@ const Player = props => {
         </div> */}
         <div className="songlist">List of songs: {props.tracks}</div>
         <div className="artistlist">Artists: {props.artist}</div>
-        <div className="background" style={backgroundStyles} />{" "}
+        {/*   <div className="background" style={backgroundStyles} />{" "} */}
       </div>
     </div>
   );

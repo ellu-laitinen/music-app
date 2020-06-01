@@ -11,20 +11,20 @@ class App extends Component {
     super();
     this.state = {
       token: null,
-      item: {
-        album: {
-          images: [{ url: "" }]
-        },
-        name: "",
-        artists: [{ name: "" }],
-        duration_ms: 0
-      },
-      is_playing: "Paused",
-      progress_ms: 0,
+      /*  item: {
+         album: {
+           images: [{ url: "" }]
+         },
+         name: "",
+         artists: [{ name: "" }],
+         duration_ms: 0
+       },
+       is_playing: "Paused",
+       progress_ms: 0, */
       tracks: undefined,
       artist: undefined
     };
-    this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this);
+    /*   this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this); */
   }
   componentDidMount() {
     // Set token
@@ -99,9 +99,9 @@ class App extends Component {
           )}
           {this.state.token && (
             <Player
-              item={this.state.item}
-              is_playing={this.state.is_playing}
-              progress_ms={this.progress_ms}
+              /*    item={this.state.item}
+                 is_playing={this.state.is_playing}
+                 progress_ms={this.progress_ms} */
               tracks={this.state.tracks}
               artist={this.state.artist}
             />
