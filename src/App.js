@@ -7,23 +7,25 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  state = {
-    token: null,
-    /*   item: {
-        album: {
-          images: [{ url: "" }]
-        },
-        name: "",
-        artists: [{ name: "" }],
-        duration_ms: 0
-      },
-      is_playing: "Paused",
-      progress_ms: 0, */
-    tracks: undefined,
-    artist: undefined
-  };
-  /* this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this); */
-
+  constructor() {
+    super();
+    this.state = {
+      token: null,
+      /*  item: {
+         album: {
+           images: [{ url: "" }]
+         },
+         name: "",
+         artists: [{ name: "" }],
+         duration_ms: 0
+       },
+       is_playing: "Paused",
+       progress_ms: 0, */
+      tracks: undefined,
+      artist: undefined
+    };
+    /*   this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this); */
+  }
   componentDidMount() {
     // Set token
     let _token = hash.access_token;

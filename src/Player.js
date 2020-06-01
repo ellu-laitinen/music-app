@@ -2,13 +2,13 @@ import React from "react";
 import "./Player.css";
 
 const Player = props => {
-  /*  const backgroundStyles = {
-     backgroundImage: `url(${
-       props.item.album.images[0].url
-       })`,
-   }; */
-
-  /*   const progressBarStyles = {
+  /*   const backgroundStyles = {
+      backgroundImage: `url(${
+        props.item.album.images[0].url
+        })`,
+    }; */
+  /* 
+    const progressBarStyles = {
       width: (props.progress_ms * 100 / props.item.duration_ms) + '%'
     }; */
 
