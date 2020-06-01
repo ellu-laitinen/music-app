@@ -43,3 +43,24 @@
     background-color: #eee;
     height: 4px;
 }
+
+.songs {
+    display: flex;
+    flex-direction: row;
+}
+
+.songlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: green;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+.artistlist {
+    display:flex;
+    flex-direction: column;
+    padding: 3rem;
+    margin: 3rem;
+}

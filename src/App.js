@@ -7,11 +7,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      token: null,
-      item: {
+  state = {
+    token: null,
+    /*   item: {
         album: {
           images: [{ url: "" }]
         },
@@ -20,12 +18,12 @@ class App extends Component {
         duration_ms: 0
       },
       is_playing: "Paused",
-      progress_ms: 0,
-      tracks: undefined,
-      artist: undefined
-    };
-    this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this);
-  }
+      progress_ms: 0, */
+    tracks: undefined,
+    artist: undefined
+  };
+  /* this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this); */
+
   componentDidMount() {
     // Set token
     let _token = hash.access_token;
@@ -35,27 +33,27 @@ class App extends Component {
       this.setState({
         token: _token
       });
-      this.getCurrentlyPlaying(_token);
+      this.getSongs(_token);
     }
   }
 
-  getCurrentlyPlaying(token) {
+  getSongs(token) {
     // Make a call using the token
     $.ajax({
-      url: "https://api.spotify.com/v1/search?q=year%3A1996&type=track&market=US&limit=10",
+      url: "https://api.spotify.com/v1/search?q=year%3A1987&type=track&market=US&limit=10",
       type: "GET",
       beforeSend: xhr => {
         xhr.setRequestHeader("Authorization", "Bearer " + token);
       },
       success: data => {
-        const song = data.tracks.items.map(function (i) {
+        const song = data.tracks.items.map((i) => {
           console.log(i.name)
           return i.name
 
         });
         /* console.log(song) */
 
-        const artist = data.tracks.items.map(function (i) {
+        const artist = data.tracks.items.map((i) => {
           /* console.log(i.artists) */
           return i.artists.map(function (b) {
             console.log(b.name)
@@ -66,13 +64,15 @@ class App extends Component {
 
         /* console.log(artist) */
         this.setState({
-          tracks: data.tracks.items.map(function (i) {
-            return i.name
-          }),
-          artist: data.tracks.items.map(function (i) {
-            return i.artists.map(function (b) {
-              return b.name
-            })
+          tracks: data.tracks.items.map((i, index) =>
+            (<span key={index}>{i.name}</span>)
+
+          ),
+          artist: data.tracks.items.map((i) => {
+            return i.artists.map((b, index) =>
+              (<span key={index}>{b.name} </span>)
+
+            )
           })
           /*  item: data.item,
            is_playing: data.is_playing,
@@ -99,9 +99,9 @@ class App extends Component {
           )}
           {this.state.token && (
             <Player
-              item={this.state.item}
-              is_playing={this.state.is_playing}
-              progress_ms={this.progress_ms}
+              /*    item={this.state.item}
+                 is_playing={this.state.is_playing}
+                 progress_ms={this.progress_ms} */
               tracks={this.state.tracks}
               artist={this.state.artist}
             />
