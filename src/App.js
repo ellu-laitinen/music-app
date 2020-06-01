@@ -3,8 +3,8 @@ import $ from "jquery";
 import { authEndpoint, clientId, redirectUri, scopes } from "./Config";
 import hash from "./hash";
 import Player from "./Player";
-import logo from './logo.svg';
 import './App.css';
+
 
 class App extends Component {
   constructor() {
@@ -85,8 +85,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <h1>Music From My Year</h1>
           {!this.state.token && (
             <a
               className="btn btn--loginApp-link"
@@ -106,7 +105,7 @@ class App extends Component {
               artist={this.state.artist}
             />
           )}
-        </header>
+        
 
       </div>
     );
