@@ -7,19 +7,16 @@ import './App.css';
 
 const App = () => {
 
-    const [token, setToken] = useState(null)
+    const [token, setToken] = useState([])
     const [tracks, setTracks] = useState([])
     const [artist, setArtist] = useState([])
+    let _token = hash.access_token;
 
     useEffect(() => {
-        let _token = hash.access_token;
 
         if (_token) {
             setToken(_token)
         }
-    })
-
-    useEffect(() => {
         $.ajax({
             url: "https://api.spotify.com/v1/search?q=year%3A1996&type=track&market=US&limit=10",
             type: "GET",
@@ -27,31 +24,31 @@ const App = () => {
                 xhr.setRequestHeader("Authorization", "Bearer " + token);
             },
             success: data => {
-                const song = data.tracks.items.map(function (i) {
+                const song = data.tracks.items.map((i) => {
+                    console.log(i.name)
                     return i.name
-                },
+                }, []);
 
-                    []);
                 setTracks(song)
                 /* console.log(song) */
 
                 const artist = data.tracks.items.map((i) => {
                     /* console.log(i.artists) */
                     return i.artists.map((b) => {
-
+                        console.log(b.name)
                         return b.name
-                    }, [])
+
+                    })
 
 
-                }, [])
+
+                })
                 setArtist(artist)
 
                 /* console.log(artist) */
                 const trackList = data.tracks.items.map((i, index) =>
-                    (<span key={index}>{i.name}</span>)
+                    (<span key={index}>{i.name}</span>), [])
 
-
-                )
                 setTracks(trackList)
 
                 const artistList = data.tracks.items.map((i) => {
@@ -66,7 +63,7 @@ const App = () => {
 
             }
         });
-    })
+    }, [])
 
     return (
         <div>
