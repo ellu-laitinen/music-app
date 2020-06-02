@@ -7,8 +7,8 @@ import "./App.css";
 
 const App = () => {
     const [_token, setToken] = useState(undefined);
-    const [tracks, setTracks] = useState([]);
-    const [artist, setArtist] = useState([]);
+    const [tracks, setTracks] = useState();
+    const [artist, setArtist] = useState();
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
     );
@@ -22,7 +22,7 @@ const App = () => {
         }
         $.ajax({
             url:
-                "https://api.spotify.com/v1/search?q=year%3A2019&type=track&market=US&limit=10",
+                "https://api.spotify.com/",
             type: "GET",
             beforeSend: (xhr) => {
                 xhr.setRequestHeader("Authorization", "Bearer " + _token);
