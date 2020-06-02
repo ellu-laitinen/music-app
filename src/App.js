@@ -9,7 +9,6 @@ const App = () => {
     const [_token, setToken] = useState(undefined);
     const [tracks, setTracks] = useState();
     const [artist, setArtist] = useState();
-    const [manyArtists, setManyArtists] = useState();
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
     );
@@ -28,7 +27,7 @@ const App = () => {
              beforeSend: (xhr) => {
                  xhr.setRequestHeader("Authorization", "Bearer " + _token);
              }, *//* 
-        success: (data) => { */
+success: (data) => { */
         /*   const song = data.tracks.items.map((i) => {
               console.log(i.name);
               return i.name;
@@ -86,20 +85,18 @@ const App = () => {
                 /* console.log(song) */
 
                 const artist = data.tracks.items.map((i) => {
-                    console.log(data.tracks.items)
-                    if (i.artists.length > 1) {
-                        console.log('long array')
-                        console.log(i.artists)
-                        const manyArtists = i.artists.map((c) => {
-                            console.log(c.name)
-                            return c.name
-                        })
-                        console.log(manyArtists)
-                        setManyArtists(manyArtists)
-                    }
+                    /* console.log(data.tracks.items) */
+                    /* if (i.artists.length > 1) { */
+                    /* console.log(i.artists) */
+                    /*   i.artists.map((c) => { */
+                    /* console.log(c.name) */
+                    /*    return c.name
+                   })
+*/
+                    /* } */
                     /*  console.log(i.artists); */
                     return i.artists.map((b) => {
-                        /* console.log(b.name); */
+                        console.log(b.name);
                         return b.name;
                     });
                 });
@@ -108,14 +105,22 @@ const App = () => {
 
                 console.log(artist);
                 const trackList = data.tracks.items.map((i, index) => (
-                    <p key={index} >{i.name}</p>
+                    <p key={i.id} >{i.name}</p>
                 ));
 
                 setTracks(trackList);
 
-                const artistList = data.tracks.items.map((i) =>
-                    i.artists.map((b, index) => <p key={index}>{b.name} </p>)
+                const artistList = data.tracks.items.map((i) => (
+                    <p key={i.id}>{i.artists.map((b) => {
+                        console.log(b.name)
+                        if (i.artists.length > 1) {
+                            return b.name + (', ')
+                        }
+                        return b.name + (' ')
+                    })} </p>)
+
                 );
+
                 artistList.toString()
                 setArtist(artistList);
                 /*  item: data.item,
@@ -151,7 +156,7 @@ const App = () => {
                         </div>
                         <div className="enjoyBanner">
                             <p>{textLine}</p>
-                            <Player tracks={tracks} artist={artist} manyArtists={manyArtists} />
+                            <Player tracks={tracks} artist={artist} />
                         </div>
                     </div>
 

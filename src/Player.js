@@ -10,14 +10,14 @@ const Player = ({ tracks, artist }) => {
   }
 
   return (
-    <div className="App">
-      <div className="songs">
-        <div className="songlist">List of songs: {tracks}</div>
-        <div className="artistlist">Artists: {artist}</div>
+    <tbody className="App">
+      <tr className="songs">
+        <td className="songlist" colspan="2">List of songs: {tracks}</td>
+        <th className="artistlist">Artists: {artist}</th>
 
-      </div>
+      </tr>
 
-    </div>
+    </tbody>
   );
 }
 

@@ -32,6 +32,11 @@ h1 {
   color: rgb(20, 20, 20);
 
 }
+
+p {
+  border-bottom: 1px black solid;
+  
+}
   
   
 

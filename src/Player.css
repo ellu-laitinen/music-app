@@ -2,6 +2,7 @@
 .songs {
     display: flex;
     flex-direction: row;
+  
 }
 
 .songlist {
