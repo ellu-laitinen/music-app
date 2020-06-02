@@ -7,7 +7,7 @@ import './App.css';
 
 const App = () => {
 
-    const [_token, setToken] = useState(undefined)
+    const [_token, setToken] = useState([])
     const [tracks, setTracks] = useState([])
     const [artist, setArtist] = useState([])
 
@@ -27,7 +27,8 @@ const App = () => {
             },
             success: data => {
                 const song = data.tracks.items.map((i) => {
-                    console.log(i.name)
+                    /* console.log(data.tracks.items)
+                    console.log(i.name) */
                     return i.name
                 });
 
@@ -35,10 +36,13 @@ const App = () => {
                 /* console.log(song) */
 
                 const artist = data.tracks.items.map((i) => {
-                    console.log(i.artists)
+                    console.log(data.tracks.items)
                     return i.artists.map((b) => {
-                        console.log(b.name)
-                        return b.name
+                        /*  if (b.name.length > 1) {
+                             return ('long array')
+                         } */
+                        console.log(b.name.toString())
+                        return b.name.toString()
 
                     })
                 })
@@ -52,7 +56,7 @@ const App = () => {
 
                 const artistList = data.tracks.items.map((i) =>
                     i.artists.map((b, index) =>
-                        (<span key={index}>{b.name} </span>))
+                        (<span key={index}>{b.name}</span>))
                 )
                 setArtist(artistList)
                 /*  item: data.item,

@@ -61,6 +61,8 @@
 .artistlist {
     display:flex;
     flex-direction: column;
+    justify-content: space-evenly;
     padding: 3rem;
     margin: 3rem;
+
 }
