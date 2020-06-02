@@ -11,14 +11,12 @@ const Player = ({ tracks, artist }) => {
 
   return (
     <div className="App">
-      <div className="main-wrapper">
-
-        <div className="songs">
-          <div className="songlist">List of songs: {tracks}</div>
-          <div className="artistlist">Artists: {artist}</div>
-        </div>
+      <div className="songs">
+        <div className="songlist">List of songs: {tracks}</div>
+        <div className="artistlist">Artists: {artist}</div>
 
       </div>
+
     </div>
   );
 }
