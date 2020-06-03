@@ -9,58 +9,19 @@ const App = () => {
     const [_token, setToken] = useState(undefined);
     const [tracks, setTracks] = useState();
     const [artist, setArtist] = useState();
+    const [image, setImage] = useState();
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
     );
 
     useEffect(() => {
-        /*  const token = undefined */
+
         let _token = hash.access_token;
 
         if (_token) {
             setToken(_token);
         }
-        /*  $.ajax({
-             url:
-                 "https://api.spotify.com/",
-             type: "GET",
-             beforeSend: (xhr) => {
-                 xhr.setRequestHeader("Authorization", "Bearer " + _token);
-             }, *//* 
-success: (data) => { */
-        /*   const song = data.tracks.items.map((i) => {
-              console.log(i.name);
-              return i.name;
-          }); */
 
-        /* setTracks(song); */
-        /* console.log(song) */
-
-        /*  const artist = data.tracks.items.map((i) => {
-             console.log(i.artists);
-             return i.artists.map((b) => {
-                 console.log(b.name);
-                 return b.name;
-             });
-         }); */
-        /* setArtist(artist); */
-        /* 
-                        console.log(artist);
-                        const trackList = data.tracks.items.map((i, index) => (
-                            <span key={index}>{i.name}</span>
-                        ));
-        
-                        setTracks(trackList); */
-
-        /*    const artistList = data.tracks.items.map((i) =>
-               i.artists.map((b, index) => <span key={index}>{b.name} </span>)
-           );
-           setArtist(artistList); */
-        /*  item: data.item,
-                 is_playing: data.is_playing,
-                 progress_ms: data.progress_ms */
-        /*  } *//* , */
-        /* }); */
     }, []);
 
     const searchYear = () => {
@@ -77,42 +38,29 @@ success: (data) => { */
             },
             success: (data) => {
                 const song = data.tracks.items.map((i) => {
-                    /* console.log(i.name); */
                     return i.name;
                 });
 
                 setTracks(song);
-                /* console.log(song) */
 
                 const artist = data.tracks.items.map((i) => {
-                    /* console.log(data.tracks.items) */
-                    /* if (i.artists.length > 1) { */
-                    /* console.log(i.artists) */
-                    /*   i.artists.map((c) => { */
-                    /* console.log(c.name) */
-                    /*    return c.name
-                   })
-*/
-                    /* } */
-                    /*  console.log(i.artists); */
+                    /*  console.log(data.tracks.items) */
                     return i.artists.map((b) => {
-                        console.log(b.name);
                         return b.name;
                     });
                 });
                 setArtist(artist);
 
-
-                console.log(artist);
                 const trackList = data.tracks.items.map((i, index) => (
                     <p key={i.id} >{i.name}</p>
                 ));
 
                 setTracks(trackList);
+                console.log(song)
 
                 const artistList = data.tracks.items.map((i) => (
                     <p key={i.id}>{i.artists.map((b) => {
-                        console.log(b.name)
+                        /* console.log(b.name) */
                         if (i.artists.length > 1) {
                             return b.name + (', ')
                         }
@@ -121,11 +69,28 @@ success: (data) => { */
 
                 );
 
-                artistList.toString()
                 setArtist(artistList);
-                /*  item: data.item,
-                         is_playing: data.is_playing,
-                         progress_ms: data.progress_ms */
+                console.log(artist)
+
+                /*  const image = "https://i.scdn.co/image/ab67616d00004851a4d2cb95d3ea17f773db23ee" */
+
+
+                const image = data.tracks.items.map((i) => {
+                    /*  console.log(i.album.images[1].url) */
+                    return i.album.images[1].url
+                })
+
+                setImage(image)
+
+                /*            console.log(image) */
+
+                const imageList = data.tracks.items.map((i, index) => (
+                    <img key={index} src={i.album.images[1].url} alt="" />
+
+                ))
+
+                setImage(imageList)
+                console.log(image)
             },
         });
 
@@ -156,7 +121,8 @@ success: (data) => { */
                         </div>
                         <div className="enjoyBanner">
                             <p>{textLine}</p>
-                            <Player tracks={tracks} artist={artist} />
+                            <Player tracks={tracks} artist={artist} image={image}
+                            />
                         </div>
                     </div>
 

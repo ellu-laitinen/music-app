@@ -1,7 +1,7 @@
 import React from "react";
 import "./Player.css";
 
-const Player = ({ tracks, artist }) => {
+const Player = ({ tracks, artist, image }) => {
 
   if (!tracks && !artist) {
     return (
@@ -10,14 +10,17 @@ const Player = ({ tracks, artist }) => {
   }
 
   return (
-    <tbody className="App">
-      <tr className="songs">
-        <td className="songlist" colspan="2">List of songs: {tracks}</td>
-        <th className="artistlist">Artists: {artist}</th>
+    <div className="App">
+      <div className="songs">
+        <div className="songlist">List of songs: {tracks}</div>
+        <div className="artistlist">Artists: {artist}</div>
+        <div>
+          <img src={image} alt="album" />
 
-      </tr>
+        </div>
+      </div>
 
-    </tbody>
+    </div>
   );
 }
 
