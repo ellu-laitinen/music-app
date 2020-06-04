@@ -10,6 +10,7 @@ const App = () => {
     const [tracks, setTracks] = useState();
     const [artist, setArtist] = useState();
     const [image, setImage] = useState();
+    const [link, setLink] = useState();
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
     );
@@ -50,17 +51,30 @@ const App = () => {
                     });
                 }); */
 
+                /* const link = data.tracks.items.map((i) => {
+                    console.log(i.external_urls.spotify)
+                    return i.external_urls.spotify
 
-                const trackList = data.tracks.items.map((i, index) => (
-                    <p key={i.id} >{i.name}</p>
-                ));
+                })
+                setLink(link) */
+
+
+                const trackList = data.tracks.items.map((i) =>
+                    <p className="tooltip" key={i.id} ><a target="_blank" rel="noopener noreferrer" href={i.external_urls.spotify}>{i.name}<span className="tooltipText">Listen in Spotify</span></a></p>
+                );
 
                 setTracks(trackList);
                 /* console.log(song) */
 
+                /*  const linkList = data.tracks.items.map((i) =>
+                     <a key={i.id} href={i.external_urls.spotify}>Listen in Spotify</a>
+                 ) */
+                /* 
+                                setLink(linkList) */
+
                 const artistList = data.tracks.items.map((i) => (
                     <p key={i.id}>{i.artists.map((b) => {
-                        /* console.log(b.name) */
+                        console.log(b.name)
                         if (i.artists.length > 1) {
                             return b.name + (', ')
                         }
@@ -72,20 +86,20 @@ const App = () => {
                 setArtist(artistList);
                 /*     console.log(artist) */
 
-                /*                 const imageList = "https://i.scdn.co/image/ab67616d00004851a4d2cb95d3ea17f773db23ee"
-                 */
+
 
                 const image = data.tracks.items.map((i) => {
-                    console.log(i.album.images[1].url)
-                    return i.album.images[1].url
+                    /* console.log(i.album.images[1].url) */
+                    return i.album.images[2].url
                 })
                 /*   
                 setImage(image) */
 
 
 
+
                 const imageList = data.tracks.items.map((i) => (
-                    <img key={i.id} src={i.album.images[1].url} alt="" />
+                    <img key={i.id} src={i.album.images[2].url} alt="" />
 
 
                 ))
@@ -122,7 +136,10 @@ const App = () => {
                         </div>
                         <div className="enjoyBanner">
                             <p>{textLine}</p>
-                            <Player tracks={tracks} artist={artist} image={image}
+                            <Player tracks={tracks}
+                                artist={artist}
+                                image={image}
+                                link={link}
                             />
                         </div>
                     </div>
