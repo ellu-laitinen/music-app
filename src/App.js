@@ -10,6 +10,7 @@ const App = () => {
   const [tracks, setTracks] = useState();
   const [artist, setArtist] = useState();
   const [image, setImage] = useState();
+  const [link, setLink] = useState();
   const [textLine, setTextLine] = useState(
     "Please select a year and click the button!"
   );
@@ -29,6 +30,7 @@ const App = () => {
     console.log(searchedYear);
     setTextLine(
       "Here is your playlist for the year " + searchedYear + ", enjoy!"
+
     );
     $.ajax({
       url:
@@ -44,10 +46,100 @@ const App = () => {
           return i.name;
         });
 
-        setTracks(song);
-        /* console.log(song) */
+    useEffect(() => {
 
-        console.log(data);
+        let _token = hash.access_token;
+
+        if (_token) {
+            setToken(_token);
+        }
+
+    }, []);
+
+    const searchYear = () => {
+        console.log("This was clicked");
+        let searchedYear = document.getElementById("year").value;
+        console.log(searchedYear);
+        setTextLine(
+            "Here is your playlist for the year " + searchedYear + ", enjoy!"
+        );
+        $.ajax({
+            url: "https://api.spotify.com/v1/search?q=year%3A" + searchedYear + "&type=track&market=US&limit=10",
+            headers: {
+                'Authorization': 'Bearer ' + _token
+            },
+            success: (data) => {
+                /*   const song = data.tracks.items.map((i) => {
+                      return i.name;
+                  });
+  
+                  setTracks(song); */
+
+                /* const artist = data.tracks.items.map((i) => { */
+                console.log(data.tracks.items)
+                /*     return i.artists.map((b) => {
+                        return b.name;
+                    });
+                }); */
+
+                /* const link = data.tracks.items.map((i) => {
+                    console.log(i.external_urls.spotify)
+                    return i.external_urls.spotify
+
+                })
+                setLink(link) */
+
+
+                const trackList = data.tracks.items.map((i) =>
+                    <p className="tooltip" key={i.id} ><a target="_blank" rel="noopener noreferrer" href={i.external_urls.spotify}>{i.name}<span className="tooltipText">Listen in Spotify</span></a></p>
+                );
+
+                setTracks(trackList);
+                /* console.log(song) */
+
+                /*  const linkList = data.tracks.items.map((i) =>
+                     <a key={i.id} href={i.external_urls.spotify}>Listen in Spotify</a>
+                 ) */
+                /* 
+                                setLink(linkList) */
+
+                const artistList = data.tracks.items.map((i) => (
+                    <p key={i.id}>{i.artists.map((b) => {
+                        console.log(b.name)
+                        if (i.artists.length > 1) {
+                            return b.name + (', ')
+                        }
+                        return b.name + (' ')
+                    })} </p>)
+
+                );
+
+                setArtist(artistList);
+                /*     console.log(artist) */
+
+
+
+                const image = data.tracks.items.map((i) => {
+                    /* console.log(i.album.images[1].url) */
+                    return i.album.images[2].url
+                })
+                /*   
+                setImage(image) */
+
+
+
+
+                const imageList = data.tracks.items.map((i) => (
+                    <img key={i.id} src={i.album.images[2].url} alt="" />
+
+
+                ))
+
+                setImage(imageList)
+                console.log(image)
+            },
+        });
+
 
         const artist = data.tracks.items.map((i) => {
           return i.artists.map((b) => {
@@ -125,16 +217,21 @@ const App = () => {
               <button className="searchButton" onClick={searchYear}>
                 Get your playlist!
               </button>
-            </div>
-            <div className="enjoyBanner">
-              <p>{textLine}</p>
-              
-              <Player tracks={tracks} artist={artist} image={image}/>    
-              </div>       
-          </div>
+                        </div>
+                        <div className="enjoyBanner">
+                            <p>{textLine}</p>
+                            <Player tracks={tracks}
+                                artist={artist}
+                                image={image}
+                                link={link}
+                            />
+                        </div>
+                    </div>
+
+                </div>
+            )}
+
         </div>
-      )}
-    </div>
   );
 };
 

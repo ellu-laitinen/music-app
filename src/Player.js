@@ -3,8 +3,6 @@ import "./Player.css";
 
 const Player = ({ tracks, artist, image }) => {
 
-  
-
   if (!tracks && !artist) {
     return (
       <div> <p>Find some music!</p> </div>
@@ -15,6 +13,7 @@ const Player = ({ tracks, artist, image }) => {
   
 
   return (
+
 
     <div className="App">
       <div className="songs">
@@ -37,6 +36,7 @@ const Player = ({ tracks, artist, image }) => {
 
 //     </tbody>
 //     </table>
+
   );
 }
 

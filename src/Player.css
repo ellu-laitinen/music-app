@@ -59,4 +59,13 @@
     overflow: auto;
 }
 
- 
+
+.links {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3rem;
+   margin: 2rem;
+
+}
+
