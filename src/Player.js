@@ -9,24 +9,34 @@ const Player = ({ tracks, artist, image }) => {
     )
   }
 
+  
+  
+
   return (
+
+
     <div className="App">
       <div className="songs">
-        <div>
-          <div className="songlist">List of songs:{tracks}
-
-          </div>
-          {/*  <div>Listen in Spotify</div> */}
-        </div>
-        {/*  <div className="links">Listen on Spotify {link}</div> */}
+        <div className="songlist">List of songs: {tracks}</div>
         <div className="artistlist">Artists: {artist}</div>
-        <div>
-          <div>{image}</div>
+        <div className="imagelist"> List of images: {image}
+          
 
         </div>
       </div>
 
-    </div >
+    </div>
+//     <table>
+// <tbody className="App">
+//       <tr className="songs">
+//         <td className="songlist" >List of songs: {tracks}</td>
+//         <td className="artistlist" >Artists: {artist}</td>
+
+//       </tr>
+
+//     </tbody>
+//     </table>
+
   );
 }
 
