@@ -9,7 +9,11 @@ const Player = ({ tracks, artist, image }) => {
     )
   }
 
+  
+  
+
   return (
+
     <div className="App">
       <div className="songs">
         <div>
@@ -20,13 +24,16 @@ const Player = ({ tracks, artist, image }) => {
         </div>
         {/*  <div className="links">Listen on Spotify {link}</div> */}
         <div className="artistlist">Artists: {artist}</div>
-        <div>
-          <div>{image}</div>
-
+    <div className="imagelist"> List of images: {image}
+          
         </div>
+      
       </div>
 
     </div >
+
+
+
   );
 }
 
