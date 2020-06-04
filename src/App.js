@@ -37,26 +37,26 @@ const App = () => {
                 'Authorization': 'Bearer ' + _token
             },
             success: (data) => {
-                const song = data.tracks.items.map((i) => {
-                    return i.name;
-                });
+                /*   const song = data.tracks.items.map((i) => {
+                      return i.name;
+                  });
+  
+                  setTracks(song); */
 
-                setTracks(song);
-
-                const artist = data.tracks.items.map((i) => {
-                    /*  console.log(data.tracks.items) */
-                    return i.artists.map((b) => {
+                /* const artist = data.tracks.items.map((i) => { */
+                console.log(data.tracks.items)
+                /*     return i.artists.map((b) => {
                         return b.name;
                     });
-                });
-                setArtist(artist);
+                }); */
+
 
                 const trackList = data.tracks.items.map((i, index) => (
                     <p key={i.id} >{i.name}</p>
                 ));
 
                 setTracks(trackList);
-                console.log(song)
+                /* console.log(song) */
 
                 const artistList = data.tracks.items.map((i) => (
                     <p key={i.id}>{i.artists.map((b) => {
@@ -70,22 +70,23 @@ const App = () => {
                 );
 
                 setArtist(artistList);
-                console.log(artist)
+                /*     console.log(artist) */
 
-                /*  const image = "https://i.scdn.co/image/ab67616d00004851a4d2cb95d3ea17f773db23ee" */
-
+                /*                 const imageList = "https://i.scdn.co/image/ab67616d00004851a4d2cb95d3ea17f773db23ee"
+                 */
 
                 const image = data.tracks.items.map((i) => {
-                    /*  console.log(i.album.images[1].url) */
+                    console.log(i.album.images[1].url)
                     return i.album.images[1].url
                 })
+                /*   
+                setImage(image) */
 
-                setImage(image)
 
-                /*            console.log(image) */
 
-                const imageList = data.tracks.items.map((i, index) => (
-                    <img key={index} src={i.album.images[1].url} alt="" />
+                const imageList = data.tracks.items.map((i) => (
+                    <img key={i.id} src={i.album.images[1].url} alt="" />
+
 
                 ))
 
