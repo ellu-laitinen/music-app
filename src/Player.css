@@ -2,6 +2,11 @@
 .songs {
     display: flex;
     flex-direction: row;
+    font-size: 2vw;
+    max-width: 70%;
+   /* white-space: pre;
+   overflow: hidden;
+   text-overflow: ellipsis; */
   
 }
 
@@ -10,16 +15,48 @@
     flex-direction: column;
     justify-content: space-evenly;
     color: green;
-    padding: 3rem;
+    /* padding: 3rem; */
     margin: 2rem;
+    white-space: nowrap;
+   width: 30%;
+    overflow: hidden;
    
 }
+
+
 
 .artistlist {
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 3rem;
+    /* padding: 3rem; */
    margin: 2rem;
+   white-space: nowrap;
+   overflow: hidden;
+   width: 30%;
+   
 
 }
+
+.imagelist {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* padding: 3rem; */
+   margin: 2rem;
+   margin-top: 8rem;
+  
+}
+
+.imagelist img {
+    display: block;
+    width:50%;
+    margin: 2rem;
+}
+
+.artistlist p:hover {
+    color:blueviolet;
+    overflow: auto;
+}
+
+ 
