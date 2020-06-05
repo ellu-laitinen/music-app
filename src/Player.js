@@ -1,41 +1,26 @@
 import React from "react";
 import "./Player.css";
+import Card from 'react-bootstrap/Card'
 
-const Player = ({ tracks, artist, image }) => {
+const Player = ({ trackList, artist, image, link }) => {
 
-  if (!tracks && !artist) {
-    return (
-      <div> <p>Find some music!</p> </div>
-    )
-  }
-
-  
-  
+  /*   if (!trackList && !artist) {
+      return (
+        <div> <p>Find some music!</p> </div>
+      )
+    } */
 
   return (
 
 
     <div className="App">
       <div className="songs">
-        <div className="songlist">List of songs: {tracks}</div>
-        <div className="artistlist">Artists: {artist}</div>
-        <div className="imagelist"> List of images: {image}
-          
-
-        </div>
+        <h2 className="songlist"> {trackList}</h2>
+        <h3 className="artistlist"> {artist}</h3>
+        <img src={image} alt="album cover" className="imagelist" />
+        <p><a target="_blank" rel="noopener noreferrer" href={link}>Listen in Spotify</a> </p>
       </div>
-
     </div>
-//     <table>
-// <tbody className="App">
-//       <tr className="songs">
-//         <td className="songlist" >List of songs: {tracks}</td>
-//         <td className="artistlist" >Artists: {artist}</td>
-
-//       </tr>
-
-//     </tbody>
-//     </table>
 
   );
 }

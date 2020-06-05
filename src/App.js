@@ -6,8 +6,8 @@ import Player from "./Player";
 import "./App.css";
 
 const App = () => {
-    const [_token, setToken] = useState(undefined);
-    const [tracks, setTracks] = useState();
+    const [_token, setToken] = useState([]);
+    const [trackList, setTracks] = useState();
     const [artist, setArtist] = useState();
     const [image, setImage] = useState();
     const link = undefined
@@ -32,9 +32,16 @@ const App = () => {
         console.log(chosenGenre);
         let chosenMarket = document.getElementById("market").value;
         console.log(chosenMarket);
-        setTextLine(
-            "Here are your " + chosenLimit + " " + chosenGenre + " songs from the year " + searchedYear + ", enjoy!"
-        );
+
+        if (!chosenGenre) {
+            setTextLine
+                ("Here are your " + chosenLimit + " songs from the year " + searchedYear + ", enjoy!")
+        } else {
+            setTextLine
+                (
+                    "Here are your " + chosenLimit + " " + chosenGenre + " songs from the year " + searchedYear + ", enjoy!"
+                )
+        };
         $.ajax({
             url: "https://api.spotify.com/v1/search?q=year%3A" + searchedYear + "%20genre:" + chosenGenre + "&type=track&market=" + chosenMarket + "&limit=" + chosenLimit,
             headers: {
@@ -42,39 +49,52 @@ const App = () => {
             },
             success: (data) => {
 
-                console.log(data.tracks.items)
-
-                const trackList = data.tracks.items.map((i) =>
-                    <p className="tooltip" key={i.id} ><a target="_blank" rel="noopener noreferrer" href={i.external_urls.spotify}>{i.name}<span className="tooltipText">Listen in Spotify</span></a></p>
-                );
+                /*      console.log(data.tracks.items) */
+                /* ><a target="_blank" rel="noopener noreferrer" href={i.external_urls.spotify}>{i.name}<span className="tooltipText">Listen in Spotify</span></a> */
+                const trackList = data.tracks.items.map((i) => {
+                    return (
+                        <div>
+                            <Player
+                                key={i.id}
+                                trackList={i.name}
+                                image={i.album.images[2].url}
+                                artist={i.artists.map((b) => {
+                                    return b.name
+                                })}
+                                link={i.external_urls.spotify}
+                            ></Player>
+                        </div>
+                    )
+                });
 
                 setTracks(trackList);
+                /*       setImage(image)
+                      console.log(image) */
 
 
-                const artistList = data.tracks.items.map((i) => (
-                    <p key={i.id}>{i.artists.map((b) => {
-                        console.log(b.name)
-                        if (i.artists.length > 1) {
-                            return b.name + (', ')
-                        }
-                        return b.name + (' ')
-                    })} </p>)
+                /*     const artistList = data.tracks.items.map((i) => (
+                        <p key={i.id}>{i.artists.map((b) => {
+                            console.log(b.name)
+                            if (i.artists.length > 1) {
+                                return b.name + (', ')
+                            }
+                            return b.name + (' ')
+                        })} </p>)
+    
+                    ); */
 
-                );
+                /*       setArtist(artistList); */
 
-                setArtist(artistList);
+                /*     const image = data.tracks.items.map((i) => {
+    
+                        return i.album.images[2].url
+                    })
+     */
+                /*    const imageList = data.tracks.items.map((i) => (
+                       <img key={i.id} src={i.album.images[2].url} alt="" />
+                   )) */
 
-                const image = data.tracks.items.map((i) => {
 
-                    return i.album.images[2].url
-                })
-
-                const imageList = data.tracks.items.map((i) => (
-                    <img key={i.id} src={i.album.images[2].url} alt="" />
-                ))
-
-                setImage(imageList)
-                console.log(image)
             },
         });
     };
@@ -98,7 +118,8 @@ const App = () => {
                         <h3>Search bar thingy stuff here</h3>
                         <div>
                             <p>Select year <input type="number" id="year" defaultValue="1990" min="1900" max="2030"></input></p>
-                            <p>Select genre <select id="genre" defaultValue="pop">
+                            <p>Select genre <select id="genre">
+                                <option selected value> -- select an option -- </option>
                                 <option value="ambient">Ambient</option>
                                 <option value="black-metal">Black-metal</option>
                                 <option value="blues">Blues</option>
@@ -148,11 +169,13 @@ const App = () => {
                         </div>
                         <div className="enjoyBanner">
                             <p>{textLine}</p>
-                            <Player tracks={tracks}
+                            {trackList}
+
+                            {/*  <Player tracks={tracks}
                                 artist={artist}
                                 image={image}
                                 link={link}
-                            />
+                            /> */}
                         </div>
                     </div>
 

@@ -1,36 +1,36 @@
-
+/* 
 .songs {
     display: flex;
     flex-direction: row;
     font-size: 2vw;
-    max-width: 70%;
+    max-width: 70%; */
    /* white-space: pre;
    overflow: hidden;
    text-overflow: ellipsis; */
   
-}
+/* }
 
 .songlist {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    color: green;
+    color: green; */
     /* padding: 3rem; */
-    margin: 2rem;
+ /*    margin: 2rem;
     white-space: nowrap;
-   width: 30%;
+   width: 30%; */
   /*   overflow: hidden; */
    
-}
+/* }
 
 
 
 .artistlist {
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
     /* padding: 3rem; */
-   margin: 2rem;
+/*    margin: 2rem;
    white-space: nowrap;
    overflow: hidden;
    width: 30%;
@@ -41,9 +41,9 @@
 .imagelist {
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
     /* padding: 3rem; */
-   margin: 2rem;
+/*    margin: 2rem;
    margin-top: 8rem;
   
 }
@@ -67,5 +67,5 @@
     padding: 3rem;
    margin: 2rem;
 
-}
+} */
 
