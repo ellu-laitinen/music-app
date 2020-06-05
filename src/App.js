@@ -4,13 +4,11 @@ import $ from "jquery";
 import hash from "./hash";
 import Player from "./Player";
 import "./App.css";
+import Container from 'react-bootstrap/Container'
 
 const App = () => {
     const [_token, setToken] = useState([]);
-    const [trackList, setTracks] = useState();
-    const [artist, setArtist] = useState();
-    const [image, setImage] = useState();
-    const link = undefined
+    const [trackList, setTracks] = useState([]);
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
     );
@@ -48,16 +46,13 @@ const App = () => {
                 'Authorization': 'Bearer ' + _token
             },
             success: (data) => {
-
-                /*      console.log(data.tracks.items) */
-                /* ><a target="_blank" rel="noopener noreferrer" href={i.external_urls.spotify}>{i.name}<span className="tooltipText">Listen in Spotify</span></a> */
                 const trackList = data.tracks.items.map((i) => {
                     return (
                         <div>
                             <Player
                                 key={i.id}
                                 trackList={i.name}
-                                image={i.album.images[2].url}
+                                image={i.album.images[1].url}
                                 artist={i.artists.map((b) => {
                                     return b.name
                                 })}
@@ -68,33 +63,6 @@ const App = () => {
                 });
 
                 setTracks(trackList);
-                /*       setImage(image)
-                      console.log(image) */
-
-
-                /*     const artistList = data.tracks.items.map((i) => (
-                        <p key={i.id}>{i.artists.map((b) => {
-                            console.log(b.name)
-                            if (i.artists.length > 1) {
-                                return b.name + (', ')
-                            }
-                            return b.name + (' ')
-                        })} </p>)
-    
-                    ); */
-
-                /*       setArtist(artistList); */
-
-                /*     const image = data.tracks.items.map((i) => {
-    
-                        return i.album.images[2].url
-                    })
-     */
-                /*    const imageList = data.tracks.items.map((i) => (
-                       <img key={i.id} src={i.album.images[2].url} alt="" />
-                   )) */
-
-
             },
         });
     };
@@ -169,7 +137,12 @@ const App = () => {
                         </div>
                         <div className="enjoyBanner">
                             <p>{textLine}</p>
-                            {trackList}
+                            <Container fluid>
+                                <div className="musicList">
+                                    {trackList}
+                                </div>
+                            </Container>
+
 
                             {/*  <Player tracks={tracks}
                                 artist={artist}

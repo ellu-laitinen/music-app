@@ -1,9 +1,12 @@
-/* 
+
 .songs {
-    display: flex;
-    flex-direction: row;
+text-align: center;
+border: solid 1px black;
+   
     font-size: 2vw;
-    max-width: 70%; */
+    margin-top: 2rem;
+  
+}
    /* white-space: pre;
    overflow: hidden;
    text-overflow: ellipsis; */

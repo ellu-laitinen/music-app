@@ -3,12 +3,14 @@
 .App {
   text-align: center;
   background-color:#E4E0C7;
-  min-height: 100vh;
-  display: flex;
+  border: black solid 1px;
+  
+
+ /*  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); */
   color: rgb(20, 20, 20);
 }
 
@@ -37,6 +39,9 @@ p {
   border-bottom: 1px black solid;
   
 } */
+.musicList {
+  display:inline-block;
+}
 
 
   
