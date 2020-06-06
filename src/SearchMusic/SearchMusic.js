@@ -28,26 +28,27 @@ const SearchMusic = () => {
         console.log(chosenLimit);
         let chosenGenre = document.getElementById("genre").value;
         console.log(chosenGenre);
-        let chosenMarket = document.getElementById("market").value;
-        console.log(chosenMarket);
 
-        if (!chosenGenre) {
-            setTextLine
-                ("Here are your " + chosenLimit + " songs from the year " + searchedYear + ", enjoy!")
-        } else {
-            setTextLine
-                (
-                    "Here are your " + chosenLimit + " " + chosenGenre + " songs from the year " + searchedYear + ", enjoy!"
-                )
-        };
+
+        setTextLine
+            (
+                "Here are your " + chosenLimit + "songs from the year "
+                + searchedYear + ", enjoy!"
+            )
+
         $.ajax({
-            url: "https://api.spotify.com/v1/search?q=year%3A" + searchedYear + "%20genre:" + chosenGenre + "&type=track&market=" + chosenMarket + "&limit=" + chosenLimit,
+            url: "https://api.spotify.com/v1/search?q=year%3A" +
+                searchedYear + "%20genre:" +
+                chosenGenre + "&type=track&limit=" +
+                chosenLimit + "&market=US",
+
             headers: {
                 'Authorization': 'Bearer ' + _token
             },
             success: (data) => {
                 const trackList = data.tracks.items.map((i) => {
                     console.log(data.tracks.items)
+                    console.log(i.artists)
                     return (
                         <div>
                             <Player
@@ -139,11 +140,11 @@ const SearchMusic = () => {
                         </div>
                         <div className="enjoyBanner">
                             <p>{textLine}</p>
-                            <Container fluid>
-                                <div className="musicList">
-                                    {trackList}
-                                </div>
-                            </Container>
+
+                            <div className="musicList">
+                                {trackList}
+                            </div>
+
                         </div>
                     </div>
 
