@@ -114,7 +114,13 @@ const SearchMusic = () => {
                                 <option value="%20genre:tango">Tango</option>
                                 <option value="%20genre:techno">Techno</option>
                             </select></p>
-                            <p>Number of songs <input type="number" id="limit" defaultValue="10" min="5" max="50"></input></p>
+                            <p>Number of songs <select id="limit">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                                </select></p>
                             <button className="searchButton" onClick={searchYear}>
                                 Get your playlist!
                             </button>
@@ -136,3 +142,6 @@ const SearchMusic = () => {
 };
 
 export default SearchMusic;
+
+
+
