@@ -34,7 +34,7 @@ const SearchMusic = () => {
             "Here are your " + chosenLimit + " songs from the year " + searchedYear + ", enjoy!"
         )
         $.ajax({
-            url: "https://api.spotify.com/v1/search?q=year%3A" + searchedYear + chosenGenre + "&type=track&market=US&limit=" + chosenLimit,
+            url: "https://api.spotify.com/v1/search?q=year%3A" + searchedYear + "%20genre:" + chosenGenre + "&type=track&market=US&limit=" + chosenLimit,
             headers: {
                 'Authorization': 'Bearer ' + _token
             },
