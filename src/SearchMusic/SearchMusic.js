@@ -4,11 +4,10 @@ import $ from "jquery";
 import hash from "../hash";
 import Player from "../Player";
 import "./SearchMusic.css";
-import Container from 'react-bootstrap/Container'
 
 const SearchMusic = () => {
     const [_token, setToken] = useState(undefined);
-    const [trackList, setTracks] = useState([]);
+    const [trackList, setTracks] = useState(undefined);
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
     );
@@ -30,18 +29,11 @@ const SearchMusic = () => {
         console.log(chosenGenre);
 
 
-        setTextLine
-            (
-                "Here are your " + chosenLimit + "songs from the year "
-                + searchedYear + ", enjoy!"
-            )
-
+        setTextLine(
+            "Here are your " + chosenLimit + " songs from the year " + searchedYear + ", enjoy!"
+        )
         $.ajax({
-            url: "https://api.spotify.com/v1/search?q=year%3A" +
-                searchedYear + "%20genre:" +
-                chosenGenre + "&type=track&limit=" +
-                chosenLimit + "&market=US",
-
+            url: "https://api.spotify.com/v1/search?q=year%3A" + searchedYear + chosenGenre + "&type=track&market=US&limit=" + chosenLimit,
             headers: {
                 'Authorization': 'Bearer ' + _token
             },
@@ -90,61 +82,57 @@ const SearchMusic = () => {
                         <div>
                             <p>Select year <input type="number" id="year" defaultValue="1990" min="1900" max="2030"></input></p>
                             <p>Select genre <select id="genre">
-                                <option selected value> -- select an option -- </option>
-                                <option value="ambient">Ambient</option>
-                                <option value="black-metal">Black-metal</option>
-                                <option value="blues">Blues</option>
-                                <option value="classical">Classical</option>
-                                <option value="country">Country</option>
-                                <option value="death-metal">Death-metal</option>
-                                <option value="disco">Disco</option>
-                                <option value="drum-and-bass">Drum-and-bass</option>
-                                <option value="electronic">Electronic</option>
-                                <option value="folk">Folk</option>
-                                <option value="funk">Funk</option>
-                                <option value="gospel">Gospel</option>
-                                <option value="grunge">Grunge</option>
-                                <option value="hard-rock">Hard-rock</option>
-                                <option value="hip-hop">Hip-hop</option>
-                                <option value="house">House</option>
-                                <option value="industrial">Industrial</option>
-                                <option value="jazz">Jazz</option>
-                                <option value="latin">Latin</option>
-                                <option value="metal">Metal</option>
-                                <option value="new-age">New-age</option>
-                                <option value="opera">Opera</option>
-                                <option value="pop">Pop</option>
-                                <option value="punk">Punk</option>
-                                <option value="reggae">Reggae</option>
-                                <option value="rock">Rock</option>
-                                <option value="salsa">Salsa</option>
-                                <option value="samba">Samba</option>
-                                <option value="soul">Soul</option>
-                                <option value="tango">Tango</option>
-                                <option value="techno">Techno</option>
+                                <option value="">All genres</option>
+                                <option value="%20genre:ambient">Ambient</option>
+                                <option value="%20genre:black-metal">Black-metal</option>
+                                <option value="%20genre:blues">Blues</option>
+                                <option value="%20genre:classical">Classical</option>
+                                <option value="%20genre:country">Country</option>
+                                <option value="%20genre:death-metal">Death-metal</option>
+                                <option value="%20genre:disco">Disco</option>
+                                <option value="%20genre:drum-and-bass">Drum-and-bass</option>
+                                <option value="%20genre:electronic">Electronic</option>
+                                <option value="%20genre:folk">Folk</option>
+                                <option value="%20genre:funk">Funk</option>
+                                <option value="%20genre:gospel">Gospel</option>
+                                <option value="%20genre:grunge">Grunge</option>
+                                <option value="%20genre:hard-rock">Hard-rock</option>
+                                <option value="%20genre:hip-hop">Hip-hop</option>
+                                <option value="%20genre:house">House</option>
+                                <option value="%20genre:industrial">Industrial</option>
+                                <option value="%20genre:jazz">Jazz</option>
+                                <option value="%20genre:latin">Latin</option>
+                                <option value="%20genre:metal">Metal</option>
+                                <option value="%20genre:new-age">New-age</option>
+                                <option value="%20genre:opera">Opera</option>
+                                <option value="%20genre:pop">Pop</option>
+                                <option value="%20genre:punk">Punk</option>
+                                <option value="%20genre:reggae">Reggae</option>
+                                <option value="%20genre:rock">Rock</option>
+                                <option value="%20genre:salsa">Salsa</option>
+                                <option value="%20genre:samba">Samba</option>
+                                <option value="%20genre:soul">Soul</option>
+                                <option value="%20genre:tango">Tango</option>
+                                <option value="%20genre:techno">Techno</option>
                             </select></p>
-                            <p>Select market <select id="market">
-                                <option value="US">United States</option>
-                                <option value="FI">Finland</option>
-                                <option value="SE">Sweden</option>
-                                <option value="EE">Estonia</option>
-                                <option value="DE">Germany</option>
-                                <option value="FR">France</option>
-                                <option value="ES">Spain</option>
-                                <option value="GB">Great Britain</option>
+                            <p>Number of songs <select id="limit">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
                             </select></p>
-                            <p>Number of songs <input type="number" id="limit" defaultValue="10" min="5" max="50"></input></p>
                             <button className="searchButton" onClick={searchYear}>
                                 Get your playlist!
-              </button>
+                            </button>
                         </div>
                         <div className="enjoyBanner">
                             <p>{textLine}</p>
-
-                            <div className="musicList">
-                                {trackList}
+                            <div>
+                                <div className="musicList">
+                                    {trackList}
+                                </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -155,3 +143,6 @@ const SearchMusic = () => {
 };
 
 export default SearchMusic;
+
+
+
