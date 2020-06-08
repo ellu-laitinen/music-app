@@ -110,7 +110,7 @@ const App = () => {
 
   return (
     <div className={`App ${yearStyle}`}>
-      <h1 className={yearStyle}>Music From My Year</h1>
+      <h1 className={`${yearStyle}font`}>Music From My Year</h1>
       {!_token && (
         <a
           className="btn btn--loginApp-link"

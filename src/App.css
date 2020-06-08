@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
 
 .App {
   text-align: center;
@@ -21,72 +31,130 @@ h1 {
  
 }
 
-.year1800, .year1810, .year1820, .year1830, .year1840, .year1850 {
+/* .year1800, .year1810, .year1820, .year1830, .year1840, .year1850 {
   background-color: darkblue;
 }
 
 .year1860, .year1870, .year1880, .year1890 {
   background-color: darkgoldenrod;
-}
+} */
 
 .year1900{
-  background-color: forestgreen;
+  background-color: rgb(253, 238, 208);
+}
+
+.year1900font {
+  font-family: 'IM Fell Great Primer', serif;
+  color: black;
 }
 
 .year1910{
  background-color: midnightblue;
 }
 
+.year1910font {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
 .year1920{
   background-color: black;
+  
+}
+
+.year1920font{
   font-family: 'Federo', sans-serif;
   color: goldenrod;
 }
 
 .year1930 {
 background-color: lightgray;
-color: forestgreen;
 
+}
+
+.year1930font {
+  color: forestgreen;
 }
 
 .year1940 {
   background-color:rgb(255, 255, 103);
+  
+}
+
+.year1940font {
   font-family: 'Raleway', sans-serif;
   color: darkgreen;
 }
 
 .year1950 {
   background-color: powderblue;
+  
+
+}
+
+.year1950font {
   font-family: 'Yellowtail', cursive;
   color: rgb(109, 3, 3);
-
 }
 
 .year1960 {
 background-color: cyan;
 }
 
+.year1960font {
+  font-family: 'Mystery Quest', cursive;
+}
+
 .year1970 {
   background-color: darksalmon;
+  
+}
+
+.year1970font {
+  font-family: 'Monoton', cursive;
 }
 
 .year1980 {
   background-color: darkgreen;
+ }
+
+.year1980font {
+  font-family: 'Audiowide', cursive;
+  color: blue;
 }
 
 .year1990 {
  background-color: crimson;
+ 
+}
+
+.year1990font {
+  font-family: 'Libre Barcode 128 Text', cursive;
 }
 
 .year2000 {
   background-color: papayawhip;
 }
 
+.year2000font{
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
 .year2010 {
   background-color: rebeccapurple;
 }
+
+.year2010font{
+  font-family: 'Major Mono Display', monospace;
+}
+
 .year2020 {
-  background-color: salmon;
+  background-color: black;
+  color:white;
+}
+
+.year2020font {
+  font-family: 'Inconsolata', monospace;
+  color: white;
 }
 
 
