@@ -13,6 +13,7 @@ const App = () => {
   const [textLine, setTextLine] = useState(
     "Please select a year and click the button!"
   );
+  const [yearStyle, setYearStyle]= useState();
  
 
   useEffect(() => {
@@ -30,6 +31,10 @@ const App = () => {
     setTextLine(
       "Here is your playlist for the year " + searchedYear + ", enjoy!"
     );
+    let decade = searchedYear.substr(0,3) + "0";
+    console.log("The decade is"+ decade);
+    setYearStyle("year" + decade);
+    
     $.ajax({
       url:
         "https://api.spotify.com/v1/search?q=year%3A" +
@@ -104,8 +109,8 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <h1>Music From My Year</h1>
+    <div className={`App ${yearStyle}`}>
+      <h1 className={yearStyle}>Music From My Year</h1>
       {!_token && (
         <a
           className="btn btn--loginApp-link"

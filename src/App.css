@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 .App {
   text-align: center;
@@ -15,7 +18,77 @@
 h1 {
   font-family: 'Abril Fatface', cursive;
   margin: 5rem;
+ 
 }
+
+.year1800, .year1810, .year1820, .year1830, .year1840, .year1850 {
+  background-color: darkblue;
+}
+
+.year1860, .year1870, .year1880, .year1890 {
+  background-color: darkgoldenrod;
+}
+
+.year1900{
+  background-color: forestgreen;
+}
+
+.year1910{
+ background-color: midnightblue;
+}
+
+.year1920{
+  background-color: black;
+  font-family: 'Federo', sans-serif;
+  color: goldenrod;
+}
+
+.year1930 {
+background-color: lightgray;
+color: forestgreen;
+
+}
+
+.year1940 {
+  background-color:rgb(255, 255, 103);
+  font-family: 'Raleway', sans-serif;
+  color: darkgreen;
+}
+
+.year1950 {
+  background-color: powderblue;
+  font-family: 'Yellowtail', cursive;
+  color: rgb(109, 3, 3);
+
+}
+
+.year1960 {
+background-color: cyan;
+}
+
+.year1970 {
+  background-color: darksalmon;
+}
+
+.year1980 {
+  background-color: darkgreen;
+}
+
+.year1990 {
+ background-color: crimson;
+}
+
+.year2000 {
+  background-color: papayawhip;
+}
+
+.year2010 {
+  background-color: rebeccapurple;
+}
+.year2020 {
+  background-color: salmon;
+}
+
 
 .btn {
   border-style: solid;
