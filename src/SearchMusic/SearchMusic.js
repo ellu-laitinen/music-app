@@ -97,7 +97,7 @@ const SearchMusic = () => {
                 <div>
 
                     <Select></Select>
-                    <button className="searchButton" onClick={searchYear}>
+                    <button className="btn" onClick={searchYear}>
                         Get your playlist!
               </button>
                     <div className="enjoyBanner">
