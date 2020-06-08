@@ -15,7 +15,7 @@ const Player = ({ trackList, artist, image, link, songLink }) => {
                 {songLink === null ? (
                 <div> No sample available for this song :( </div>
                 ) :
-                <iframe id="sample" src={songLink} title="Spotify play button" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src={songLink} title="Spotify play button" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 }
             </div>
       </div>
