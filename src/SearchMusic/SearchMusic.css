@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.App {
+  text-align: center;
+  background-color:#E4E0C7;
+  border: black solid 1px;
+  
+
+ /*  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin); */
+  color: rgb(20, 20, 20);
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  margin: 5rem;
+}
+
+.btn {
+  border-style: solid;
+  border-color: rgb(20, 20, 20);
+  border-width: 2px;
+  background-color:#CC6E55;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 2px 2px 5px;
+}
+
+ a {
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+
+}
+/* 
+p {
+  border-bottom: 1px black solid;
+  
+} */
+/* .musicList {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-left:2rem;
+  margin-right: 2rem;
+} */
+
+
+  
+  
+
