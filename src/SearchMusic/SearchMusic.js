@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { authEndpoint, clientId, redirectUri, scopes } from "../Config";
+import { authEndpoint, clientId, redirectUri, scopes } from "../config";
 import $ from "jquery";
 import hash from "../hash";
-import Player from "../Player";
+import Player from "../Player/Player";
 import Select from '../Select/Select'
 import "./SearchMusic.css";
 
 const SearchMusic = () => {
-    const [_token, setToken] = useState(undefined);
+    const [_token, setToken] = useState([]);
     const [trackList, setTracks] = useState(undefined);
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
