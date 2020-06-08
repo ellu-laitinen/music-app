@@ -3,6 +3,7 @@ import { authEndpoint, clientId, redirectUri, scopes } from "../Config";
 import $ from "jquery";
 import hash from "../hash";
 import Player from "../Player";
+import Select from '../Select/Select'
 import "./SearchMusic.css";
 import Container from 'react-bootstrap/Container'
 
@@ -50,18 +51,18 @@ const SearchMusic = () => {
                     console.log(data.tracks.items)
                     console.log(i.artists)
                     return (
-                        <div>
-                            <Player
-                                key={i.id}
-                                trackList={i.name}
-                                image={i.album.images[1].url}
-                                artist={i.artists.map((b) => {
-                                    return b.name
-                                })}
-                                link={i.external_urls.spotify}
-                                songLink={i.preview_url}
-                            ></Player>
-                        </div>
+
+                        <Player
+                            key={i.id}
+                            trackList={i.name}
+                            image={i.album.images[1].url}
+                            artist={i.artists.map((b) => {
+                                return b.name
+                            })}
+                            link={i.external_urls.spotify}
+                            songLink={i.preview_url}
+                        ></Player>
+
                     )
                 });
 
@@ -85,68 +86,21 @@ const SearchMusic = () => {
             )}
             {_token && (
                 <div>
-                    <div className="searchContainer">
-                        <h3>Search bar thingy stuff here</h3>
-                        <div>
-                            <p>Select year <input type="number" id="year" defaultValue="1990" min="1900" max="2030"></input></p>
-                            <p>Select genre <select id="genre">
-                                <option selected value> -- select an option -- </option>
-                                <option value="ambient">Ambient</option>
-                                <option value="black-metal">Black-metal</option>
-                                <option value="blues">Blues</option>
-                                <option value="classical">Classical</option>
-                                <option value="country">Country</option>
-                                <option value="death-metal">Death-metal</option>
-                                <option value="disco">Disco</option>
-                                <option value="drum-and-bass">Drum-and-bass</option>
-                                <option value="electronic">Electronic</option>
-                                <option value="folk">Folk</option>
-                                <option value="funk">Funk</option>
-                                <option value="gospel">Gospel</option>
-                                <option value="grunge">Grunge</option>
-                                <option value="hard-rock">Hard-rock</option>
-                                <option value="hip-hop">Hip-hop</option>
-                                <option value="house">House</option>
-                                <option value="industrial">Industrial</option>
-                                <option value="jazz">Jazz</option>
-                                <option value="latin">Latin</option>
-                                <option value="metal">Metal</option>
-                                <option value="new-age">New-age</option>
-                                <option value="opera">Opera</option>
-                                <option value="pop">Pop</option>
-                                <option value="punk">Punk</option>
-                                <option value="reggae">Reggae</option>
-                                <option value="rock">Rock</option>
-                                <option value="salsa">Salsa</option>
-                                <option value="samba">Samba</option>
-                                <option value="soul">Soul</option>
-                                <option value="tango">Tango</option>
-                                <option value="techno">Techno</option>
-                            </select></p>
-                            <p>Select market <select id="market">
-                                <option value="US">United States</option>
-                                <option value="FI">Finland</option>
-                                <option value="SE">Sweden</option>
-                                <option value="EE">Estonia</option>
-                                <option value="DE">Germany</option>
-                                <option value="FR">France</option>
-                                <option value="ES">Spain</option>
-                                <option value="GB">Great Britain</option>
-                            </select></p>
-                            <p>Number of songs <input type="number" id="limit" defaultValue="10" min="5" max="50"></input></p>
-                            <button className="searchButton" onClick={searchYear}>
-                                Get your playlist!
+
+                    <Select></Select>
+                    <button className="searchButton" onClick={searchYear}>
+                        Get your playlist!
               </button>
-                        </div>
-                        <div className="enjoyBanner">
-                            <p>{textLine}</p>
+                    <div className="enjoyBanner">
+                        <p>{textLine}</p>
 
-                            <div className="musicList">
-                                {trackList}
-                            </div>
-
+                        <div className="musicList">
+                            {trackList}
                         </div>
+
+
                     </div>
+
 
                 </div>
             )}
