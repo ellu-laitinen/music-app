@@ -6,8 +6,11 @@ import Player from "../Player/Player";
 import Select from '../Select/Select'
 import "./SearchMusic.css";
 
+import { faMusic, faRecordVinyl, faHeadphones, faCompactDisc } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const SearchMusic = () => {
-    const [_token, setToken] = useState([]);
+    const [_token, setToken] = useState(undefined);
     const [trackList, setTracks] = useState(undefined);
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
@@ -46,6 +49,12 @@ const SearchMusic = () => {
                 const trackList = data.tracks.items.map((i) => {
                     console.log(data.tracks.items)
                     console.log(i.artists)
+                    if (!data) {
+                        console.log("no list")
+                        return (
+                            <p>No results</p>
+                        )
+                    }
                     return (
 
                         <Player
@@ -63,13 +72,17 @@ const SearchMusic = () => {
                 });
 
                 setTracks(trackList);
+
             },
+
         });
     };
 
     return (
         <div className={`App ${yearStyle}`}>
-            <h1 className={`${yearStyle}font`}>Music From My Year</h1>
+            <h1 className={`login ${yearStyle}font`}>
+                <FontAwesomeIcon className="icon" icon={faMusic} />
+                <FontAwesomeIcon className="icon" icon={faRecordVinyl} /> Music From My Year<FontAwesomeIcon className="icon" icon={faHeadphones} />   <FontAwesomeIcon className="icon" icon={faCompactDisc} /></h1>
             {!_token && (
                 <a
                     className="btn btn--loginApp-link"
@@ -91,7 +104,13 @@ const SearchMusic = () => {
                         <p>{textLine}</p>
 
                         <div className="musicList">
-                            {trackList}
+                            {trackList === [] ? (
+                                <div>No results, try another genre or year!</div>
+                            ) :
+                                <div>
+                                    {trackList}
+                                </div>
+                            }
                         </div>
 
 

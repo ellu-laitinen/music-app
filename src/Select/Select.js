@@ -1,13 +1,12 @@
 import React from 'react';
+import '../Select/Select.css'
 
 const Select = () => {
     return (
         <div>
-            <div>
-                <div className="searchContainer">
-                    <h3>Search bar thingy stuff here</h3>
 
-                </div>
+            <h3>Search bar thingy stuff here</h3>
+            <div className="searchContainer">
                 <p>Select year <input type="number" id="year" defaultValue="1990" min="1900" max="2030"></input></p>
                 <p>Select genre <select id="genre">
                     <option value="">All genres</option>
@@ -43,14 +42,15 @@ const Select = () => {
                     <option value="%20genre:tango">Tango</option>
                     <option value="%20genre:techno">Techno</option>
                 </select></p>
+
+                <p>Number of songs <select id="limit">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                </select></p>
             </div>
-            <p>Number of songs <select id="limit">
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-                <option value="40">40</option>
-                <option value="50">50</option>
-            </select></p>
         </div>
     );
 }

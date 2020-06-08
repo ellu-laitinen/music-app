@@ -9,14 +9,16 @@
     vertical-align: top;
     border-radius: 10px;
     font-family: 'Open Sans', sans-serif;
+    border: 1px solid black;
 }
 
 .imagelist, iframe {
-      width: 100%
+      width: 100%;
+      border: 1px solid black;
 }
+.imagelist {
+    margin-bottom: 1rem;
 
-iframe.body.-webkit-full-page-media {
-        background-color: rgb(78, 0, 74);
 }
 
 iframe {
@@ -27,13 +29,24 @@ iframe {
 }
 
 .songlist {
+    padding: 1rem;
 
 }
 
-.songlink:hover {
+.noSample {
+    border: solid 1px black;
+    font-size: 20px;
+}
+
+.songlink {
+    padding: 1rem;
+    font-size: 20px;
+}
+
+.spotify-link:hover {
      background: rgba(0, 0, 0, 0.473);
-     padding: 5px;
      border-radius: 3px;
+     padding: 2px;
      color: rgb(30, 215, 96);
 }
 
