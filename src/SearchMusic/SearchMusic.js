@@ -46,19 +46,19 @@ const SearchMusic = () => {
                 const trackList = data.tracks.items.map((i) => {
                     console.log(data.tracks.items)
                     console.log(i.artists)
-                    return (
 
+                    return (
                         <Player
                             key={i.id}
                             trackList={i.name}
+                            album={i.album.name}
                             image={i.album.images[1].url}
                             artist={i.artists.map((b) => {
                                 return b.name
                             })}
                             link={i.external_urls.spotify}
                             songLink={i.preview_url}
-                        ></Player>
-
+                        />
                     )
                 });
 

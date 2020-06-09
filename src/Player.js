@@ -1,13 +1,15 @@
 import React from "react";
 import "./Player.css";
 
-const Player = ({ trackList, artist, image, link, songLink }) => {
+const Player = ({ trackList, artist, image, link, songLink, album, popularity}) => {
 
   return (
     <div className="songs">
        <img src={image} alt="album cover" className="imagelist" />
       <h2 className="songlist"> {trackList}</h2>
       <h3 className="artistlist"> {artist.join(', ')}</h3>
+      <h4 className="albumlist">From album: {album}</h4>
+      <h4 className="popularity">Popularity: {popularity}</h4>
       <p><a target="_blank" rel="noopener noreferrer" href={link}>Listen in Spotify</a> </p>
       <div>
         <p>30 sec sample:</p>
