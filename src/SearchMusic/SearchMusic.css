@@ -11,6 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diplomata&display=swap');
 
 
 .App {
@@ -42,21 +43,26 @@ h1 {
 } */
 
 .year1900{
-  background-color: rgb(248, 243, 233);
+  background-image: url("https://source.unsplash.com/IUn1O500LMI");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:white;
+  background-size: cover
 }
 
 .year1900font {
   font-family: 'IM Fell Great Primer', serif;
-  color: black;
+  color: white;
 }
 
 .year1910{
-  background-image: url("https://source.unsplash.com/CyQMm7Mg5YQ");
+  background-image: url("https://source.unsplash.com/Otx5FHbr3OE");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: top;
+  background-position: center;
   color:white;
-  width: 100%;
+  background-size: cover;
 }
 
 .year1910font {
@@ -64,8 +70,12 @@ h1 {
 }
 
 .year1920{
-  background-color: black;
-  color: white;
+  background-image: url("https://source.unsplash.com/saS98jKhVjA");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  color:white;
+  background-size: cover;
 }
 
 .year1920font{
@@ -74,50 +84,78 @@ h1 {
 }
 
 .year1930 {
-background-color: lightgray;
+  background-image: url("https://source.unsplash.com/YwY39Ak4thk");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:white;
+  background-size: cover;
 
 }
 
 .year1930font {
-  color: forestgreen;
+  color: white;
+  font-family: 'Diplomata', cursive;
 }
 
 .year1940 {
-  background-color:rgb(255, 255, 103);
+  background-image: url("https://source.unsplash.com/OKLqGsCT8qs");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:white;
+  background-size: cover;
   
 }
 
 .year1940font {
   font-family: 'Raleway', sans-serif;
-  color: darkgreen;
+  color: white;
 }
 
 .year1950 {
-  background-color: powderblue;
+  background-image: url("https://source.unsplash.com/gcGicCJHs8s");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:white;
+  background-size: cover;
   
 
 }
 
 .year1950font {
   font-family: 'Yellowtail', cursive;
-  color: rgb(109, 3, 3);
+  color: white;
 }
 
 .year1960 {
-background-color: cyan;
+  background-image: url("https://source.unsplash.com/61rFb1qnu1k");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
+  background-size: cover;
 }
 
 .year1960font {
   font-family: 'Mystery Quest', cursive;
+  color: rgb(179, 0, 74);
 }
 
 .year1970 {
-  background-color: darksalmon;
+  background-image: url("https://source.unsplash.com/C8lJ6WE5RNw");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
+  background-size: cover;
   
 }
 
 .year1970font {
   font-family: 'Monoton', cursive;
+  text-shadow:0.5px 0.5px goldenrod;
 }
 
 .year1980 {
