@@ -17,6 +17,7 @@
 .App {
   text-align: center;
   background-color:#E4E0C7;
+  /* background-image: url("https://source.unsplash.com/RQ0_Fp2Hr2M"); */
   height: 100vh;
   border: black solid 1px;
 
@@ -244,6 +245,9 @@ h1 {
 
 .year2020 {
   background-color: black;
+  background-size: cover;
+    height: 100%;
+ width: 100%;
   color:white;
 }
 

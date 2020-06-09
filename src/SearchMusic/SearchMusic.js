@@ -37,6 +37,7 @@ const SearchMusic = () => {
         let decade = searchedYear.substr(0, 3) + "0";
         console.log("The decade is" + decade);
         setYearStyle("year" + decade);
+
         $.ajax({
             url: "https://api.spotify.com/v1/search?q=year%3A" + searchedYear + chosenGenre + "&type=track&market=US&limit=" + chosenLimit,
             headers: {
@@ -70,7 +71,10 @@ const SearchMusic = () => {
     return (
         <div className={`App ${yearStyle}`}>
             <h1 className={`${yearStyle}font`}>Music From My Year</h1>
+            
             {!_token && (
+                <div>
+                    <img src="vinyl.png"></img>
                 <a
                     className="btn btn--loginApp-link"
                     href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
@@ -79,6 +83,7 @@ const SearchMusic = () => {
                 >
                     Login to Spotify
                 </a>
+                </div>
             )}
             {_token && (
                 <div>
