@@ -18,35 +18,36 @@
 
 .App {
   text-align: center;
-  background-color:rgb(183, 238, 56);
-  color: rgb(20, 20, 20);
-  display: inline-block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
+  background-color:#E4E0C7;
   height: 100vh;
+  border: black solid 1px;
+
+  background-size: cover;
+  
+  
+
+ /*  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin); */
+  color: rgb(20, 20, 20);
 }
 
+.icon {
+  margin-right: 8px;
+  font-size: smaller;
+}
 
-
-
-.login {
+h1 {
   font-family: 'Handlee', cursive;
   margin: 5rem;
-  
  
-}
-.icon {
-  margin-left: 8px;
-  margin-right: 8px;
-  color: rgb(60, 61, 59);
 }
 
 /* .year1800, .year1810, .year1820, .year1830, .year1840, .year1850 {
   background-color: darkblue;
 }
-
 .year1860, .year1870, .year1880, .year1890 {
   background-color: darkgoldenrod;
 } */
@@ -57,7 +58,9 @@
   background-attachment: fixed;
   background-position: center;
   color:white;
-  background-size: cover
+  height: 100%;
+ width: 100%;
+  
 }
 
 .year1900font {
@@ -71,7 +74,9 @@
   background-attachment: fixed;
   background-position: center;
   color:white;
-  background-size: cover;
+  /* background-size: cover; */
+  height: 100%;
+ width: 100%;
 }
 
 .year1910font {
@@ -85,6 +90,8 @@
   background-position: top;
   color:white;
   background-size: cover;
+  height: 100%;
+ width: 100%;
 }
 
 .year1920font{
@@ -99,6 +106,8 @@
   background-position: center;
   color:white;
   background-size: cover;
+  height: 100%;
+ width: 100%;
 
 }
 
@@ -114,7 +123,8 @@
   background-position: center;
   color:white;
   background-size: cover;
-  
+  height: 100%;
+ width: 100%;
 }
 
 .year1940font {
@@ -129,6 +139,8 @@
   background-position: center;
   color:white;
   background-size: cover;
+  height: 100%;
+ width: 100%;
   
 
 }
@@ -145,6 +157,8 @@
   background-position: center;
   
   background-size: cover;
+  height: 100%;
+ width: 100%;
 }
 
 .year1960font {
@@ -159,6 +173,8 @@
   background-position: center;
   
   background-size: cover;
+  height: 100%;
+ width: 100%;
   
 }
 
@@ -171,8 +187,11 @@
   background-image: url("https://source.unsplash.com/7r8eYPAzONs");
   background-repeat: no-repeat;
   background-attachment: fixed;
+
   color:white;
-  width: 100%;
+  background-size: cover;
+  height: 100%;
+ width: 100%;
  }
 
 .year1980font {
@@ -187,7 +206,10 @@
   background-attachment: fixed;
   background-position: top;
   color:white;
-  width: 100%;
+  background-size: cover;
+ height: 100%;
+ width: 100%;
+
  
 }
 
@@ -202,7 +224,9 @@
   background-attachment: fixed;
   background-position: top;
   color: white;
-    width: 100%;
+    background-size: cover;
+    height: 100%;
+ width: 100%;
 }
 
 .year2000font{
@@ -215,7 +239,9 @@
   background-attachment: fixed;
   background-position: top;
   color: white;
-    width: 100%;
+    background-size: cover;
+    height: 100%;
+ width: 100%;
 }
 
 .year2010font{
@@ -237,17 +263,10 @@
   border-style: solid;
   border-color: rgb(20, 20, 20);
   border-width: 2px;
-  background-color:rgb(65, 247, 89);
+  background-color:#CC6E55;
   border-radius: 10px;
-
+  padding: 1rem;
   box-shadow: 2px 2px 5px;
-  font-family: 'Handlee', cursive;
-  font-size: 22px;
-
-}
-
-.btn:hover {
-  background: rgb(22, 206, 5);
 }
 
  a {
@@ -267,7 +286,3 @@ p {
   margin-left:2rem;
   margin-right: 2rem;
 } */
-
-  
-  
-

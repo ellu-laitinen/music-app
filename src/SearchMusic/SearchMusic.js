@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const SearchMusic = () => {
     const [_token, setToken] = useState(undefined);
     let [trackList, setTracks] = useState(undefined);
-    const [noList, setNoList] = useState(undefined);
+
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
     );
@@ -61,17 +61,11 @@ const SearchMusic = () => {
                             link={i.external_urls.spotify}
                             songLink={i.preview_url}
                         ></Player>
-
                     )
-
                 });
                 if (data.tracks.items.length === 0) {
                     trackList = <p>No results available, try another year or genre!</p>
-
                 }
-
-
-
                 setTracks(trackList);
             },
 
@@ -83,8 +77,8 @@ const SearchMusic = () => {
             <div className="login-page">
                 <h1 className={`login ${yearStyle}font`}>
                     <FontAwesomeIcon className="icon" icon={faMusic} />
-                    <FontAwesomeIcon className="icon" icon={faRecordVinyl} /> Music From My Year<FontAwesomeIcon className="icon" icon={faHeadphones} />
-                    <FontAwesomeIcon className="icon" icon={faCompactDisc} /></h1>
+                   Music From My Year
+                    </h1>
                 {!_token && (
                     <a
                         className="btn btn--loginApp-link"
@@ -108,8 +102,6 @@ const SearchMusic = () => {
                             <div>
                                 {trackList}
                             </div>
-
-
                         </div>
                     </div>
                 </div>
