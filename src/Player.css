@@ -26,7 +26,10 @@
     position: absolute; 
     bottom: 1rem;
 }
-    
+
+.listenSpotify {
+    color: green;
+}
 
     /* padding: 3rem; */
  /*    margin: 2rem;

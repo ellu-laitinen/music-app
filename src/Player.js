@@ -9,7 +9,7 @@ const Player = ({ trackList, artist, image, link, songLink, album}) => {
       <h2 className="songlist"> {trackList}</h2>
       <h3 className="artistlist"> {artist.join(', ')}</h3>
       <h4 className="albumlist">From album: {album}</h4>
-      <p><a target="_blank" rel="noopener noreferrer" href={link}>Listen in Spotify</a> </p>
+      <p><a target="_blank" rel="noopener noreferrer" href={link} className="listenSpotify">Listen in Spotify</a> </p>
       <div className="sample">
         <p>30 sec sample:</p>
             <div id="songlink">
