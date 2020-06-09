@@ -17,7 +17,11 @@
 .App {
   text-align: center;
   background-color:#E4E0C7;
+  height: 100vh;
   border: black solid 1px;
+
+  background-size: cover;
+  
   
 
  /*  display: flex;
@@ -48,7 +52,9 @@ h1 {
   background-attachment: fixed;
   background-position: center;
   color:white;
-  background-size: cover
+  height: 100%;
+ width: 100%;
+  
 }
 
 .year1900font {
@@ -62,7 +68,9 @@ h1 {
   background-attachment: fixed;
   background-position: center;
   color:white;
-  background-size: cover;
+  /* background-size: cover; */
+  height: 100%;
+ width: 100%;
 }
 
 .year1910font {
@@ -76,6 +84,8 @@ h1 {
   background-position: top;
   color:white;
   background-size: cover;
+  height: 100%;
+ width: 100%;
 }
 
 .year1920font{
@@ -90,6 +100,8 @@ h1 {
   background-position: center;
   color:white;
   background-size: cover;
+  height: 100%;
+ width: 100%;
 
 }
 
@@ -105,7 +117,8 @@ h1 {
   background-position: center;
   color:white;
   background-size: cover;
-  
+  height: 100%;
+ width: 100%;
 }
 
 .year1940font {
@@ -120,6 +133,8 @@ h1 {
   background-position: center;
   color:white;
   background-size: cover;
+  height: 100%;
+ width: 100%;
   
 
 }
@@ -136,6 +151,8 @@ h1 {
   background-position: center;
   
   background-size: cover;
+  height: 100%;
+ width: 100%;
 }
 
 .year1960font {
@@ -150,6 +167,8 @@ h1 {
   background-position: center;
   
   background-size: cover;
+  height: 100%;
+ width: 100%;
   
 }
 
@@ -165,6 +184,8 @@ h1 {
 
   color:white;
   background-size: cover;
+  height: 100%;
+ width: 100%;
  }
 
 .year1980font {
@@ -180,6 +201,9 @@ h1 {
   background-position: top;
   color:white;
   background-size: cover;
+ height: 100%;
+ width: 100%;
+
  
 }
 
@@ -195,6 +219,8 @@ h1 {
   background-position: top;
   color: white;
     background-size: cover;
+    height: 100%;
+ width: 100%;
 }
 
 .year2000font{
@@ -208,6 +234,8 @@ h1 {
   background-position: top;
   color: white;
     background-size: cover;
+    height: 100%;
+ width: 100%;
 }
 
 .year2010font{
@@ -255,4 +283,3 @@ p {
 
   
   
-

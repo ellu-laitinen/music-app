@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { authEndpoint, clientId, redirectUri, scopes } from "../Config";
+import { authEndpoint, clientId, redirectUri, scopes } from "../config";
 import $ from "jquery";
 import hash from "../hash";
 import Player from "../Player";
