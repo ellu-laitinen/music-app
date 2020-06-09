@@ -11,7 +11,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SearchMusic = () => {
     const [_token, setToken] = useState(undefined);
-    const [trackList, setTracks] = useState(undefined);
+    let [trackList, setTracks] = useState(undefined);
+    const [noList, setNoList] = useState(undefined);
     const [textLine, setTextLine] = useState(
         "Please select a year and click the button!"
     );
@@ -46,17 +47,10 @@ const SearchMusic = () => {
                 'Authorization': 'Bearer ' + _token
             },
             success: (data) => {
-                const trackList = data.tracks.items.map((i) => {
+                let trackList = data.tracks.items.map((i) => {
                     console.log(data.tracks.items)
                     console.log(i.artists)
-                    if (!data) {
-                        console.log("no list")
-                        return (
-                            <p>No results</p>
-                        )
-                    }
                     return (
-
                         <Player
                             key={i.id}
                             trackList={i.name}
@@ -69,10 +63,16 @@ const SearchMusic = () => {
                         ></Player>
 
                     )
+
                 });
+                if (data.tracks.items.length === 0) {
+                    trackList = <p>No results available, try another year or genre!</p>
+
+                }
+
+
 
                 setTracks(trackList);
-
             },
 
         });
@@ -95,29 +95,22 @@ const SearchMusic = () => {
             )}
             {_token && (
                 <div>
-
                     <Select></Select>
                     <button className="btn" onClick={searchYear}>
                         Get your playlist!
               </button>
                     <div className="enjoyBanner">
                         <p>{textLine}</p>
-
                         <div className="musicList">
-                            {trackList === [] ? (
-                                <div>No results, try another genre or year!</div>
-                            ) :
-                                <div>
-                                    {trackList}
-                                </div>
-                            }
+                            <div>
+                                {trackList}
+                            </div>
+
+
                         </div>
-
-
                     </div>
-
-
                 </div>
+
             )}
         </div>
     );
