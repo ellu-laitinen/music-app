@@ -80,19 +80,21 @@ const SearchMusic = () => {
 
     return (
         <div className={`App ${yearStyle}`}>
-            <h1 className={`login ${yearStyle}font`}>
-                <FontAwesomeIcon className="icon" icon={faMusic} />
-                <FontAwesomeIcon className="icon" icon={faRecordVinyl} /> Music From My Year<FontAwesomeIcon className="icon" icon={faHeadphones} />   <FontAwesomeIcon className="icon" icon={faCompactDisc} /></h1>
-            {!_token && (
-                <a
-                    className="btn btn--loginApp-link"
-                    href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-                        "%20"
-                    )}&response_type=token&show_dialog=true`}
-                >
-                    Login to Spotify
-                </a>
-            )}
+            <div className="login-page">
+                <h1 className={`login ${yearStyle}font`}>
+                    <FontAwesomeIcon className="icon" icon={faMusic} />
+                    <FontAwesomeIcon className="icon" icon={faRecordVinyl} /> Music From My Year<FontAwesomeIcon className="icon" icon={faHeadphones} />   <FontAwesomeIcon className="icon" icon={faCompactDisc} /></h1>
+                {!_token && (
+                    <a
+                        className="btn btn--loginApp-link"
+                        href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+                            "%20"
+                        )}&response_type=token&show_dialog=true`}
+                    >
+                        Login to Spotify
+                    </a>
+                )}
+            </div>
             {_token && (
                 <div>
                     <Select></Select>
