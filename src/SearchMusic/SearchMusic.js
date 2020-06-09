@@ -83,7 +83,8 @@ const SearchMusic = () => {
             <div className="login-page">
                 <h1 className={`login ${yearStyle}font`}>
                     <FontAwesomeIcon className="icon" icon={faMusic} />
-                    <FontAwesomeIcon className="icon" icon={faRecordVinyl} /> Music From My Year<FontAwesomeIcon className="icon" icon={faHeadphones} />   <FontAwesomeIcon className="icon" icon={faCompactDisc} /></h1>
+                    <FontAwesomeIcon className="icon" icon={faRecordVinyl} /> Music From My Year<FontAwesomeIcon className="icon" icon={faHeadphones} />
+                    <FontAwesomeIcon className="icon" icon={faCompactDisc} /></h1>
                 {!_token && (
                     <a
                         className="btn btn--loginApp-link"
