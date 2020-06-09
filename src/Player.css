@@ -8,6 +8,7 @@
     vertical-align: top;
     border-radius: 10px;
     min-height: 45rem;
+    position:relative;
 }
 
 .imagelist, iframe {
@@ -19,6 +20,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     color: green;
+}
+
+.sample {
+    position: absolute; 
+    bottom: 1rem;
 }
     
 

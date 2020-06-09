@@ -1,7 +1,7 @@
 import React from "react";
 import "./Player.css";
 
-const Player = ({ trackList, artist, image, link, songLink, album, popularity}) => {
+const Player = ({ trackList, artist, image, link, songLink, album}) => {
 
   return (
     <div className="songs">
@@ -9,9 +9,8 @@ const Player = ({ trackList, artist, image, link, songLink, album, popularity}) 
       <h2 className="songlist"> {trackList}</h2>
       <h3 className="artistlist"> {artist.join(', ')}</h3>
       <h4 className="albumlist">From album: {album}</h4>
-      <h4 className="popularity">Popularity: {popularity}</h4>
       <p><a target="_blank" rel="noopener noreferrer" href={link}>Listen in Spotify</a> </p>
-      <div>
+      <div className="sample">
         <p>30 sec sample:</p>
             <div id="songlink">
                 {songLink === null ? (
