@@ -11,12 +11,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diplomata&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
 
 
 .App {
   text-align: center;
   background-color:#E4E0C7;
+  min-height: 100vh;
   border: black solid 1px;
+
+  background-size: cover;
+  
   
 
  /*  display: flex;
@@ -27,8 +35,13 @@
   color: rgb(20, 20, 20);
 }
 
+.icon {
+  margin-right: 8px;
+  font-size: smaller;
+}
+
 h1 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Handlee', cursive;
   margin: 5rem;
  
 }
@@ -36,22 +49,47 @@ h1 {
 /* .year1800, .year1810, .year1820, .year1830, .year1840, .year1850 {
   background-color: darkblue;
 }
-
 .year1860, .year1870, .year1880, .year1890 {
   background-color: darkgoldenrod;
 } */
 
+.searchArea {
+  background-color: rgb(243, 240, 240, 0.5);
+  /* width: fit-content; */
+  padding: 1.5rem;
+ margin-left: 10%;
+ margin-right: 10%;
+ border-radius: 5px;
+}
+
 .year1900{
-  background-color: rgb(253, 238, 208);
+  
+  background-image: url("https://source.unsplash.com/IUn1O500LMI");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:white;
+  text-shadow: 0.5px 0.5px black;
+  height: 100%;
+ width: 100%;
+  
 }
 
 .year1900font {
   font-family: 'IM Fell Great Primer', serif;
-  color: black;
+  color: white;
 }
 
 .year1910{
- background-color: midnightblue;
+  background-image: url("https://source.unsplash.com/Otx5FHbr3OE");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:white;
+  /* background-size: cover; */
+  height: 100%;
+ width: 100%;
+ 
 }
 
 .year1910font {
@@ -59,8 +97,15 @@ h1 {
 }
 
 .year1920{
-  background-color: black;
-  
+  background-image: url("https://source.unsplash.com/saS98jKhVjA");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  color:black;
+  text-shadow: 0.5px 0.5px goldenrod;
+  background-size: cover;
+  height: 100%;
+ width: 100%;
 }
 
 .year1920font{
@@ -69,72 +114,139 @@ h1 {
 }
 
 .year1930 {
-background-color: lightgray;
+  background-image: url("https://source.unsplash.com/YwY39Ak4thk");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:white;
+  background-size: cover;
+  height: 100%;
+ width: 100%;
 
 }
 
 .year1930font {
-  color: forestgreen;
+  color: white;
+  font-family: 'Diplomata', cursive;
 }
 
 .year1940 {
-  background-color:rgb(255, 255, 103);
-  
+  background-image: url("https://source.unsplash.com/OKLqGsCT8qs");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:black;
+  background-size: cover;
+  height: 100%;
+ width: 100%;
 }
 
 .year1940font {
   font-family: 'Raleway', sans-serif;
-  color: darkgreen;
+  color: white;
 }
 
 .year1950 {
-  background-color: powderblue;
+  background-image: url("https://source.unsplash.com/gcGicCJHs8s");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:black;
+  text-shadow: 0.3px 0.3px white;
+  background-size: cover;
+  height: 100%;
+ width: 100%;
   
 
 }
 
 .year1950font {
   font-family: 'Yellowtail', cursive;
-  color: rgb(109, 3, 3);
+  color: white;
 }
 
 .year1960 {
-background-color: cyan;
+  background-image: url("https://source.unsplash.com/61rFb1qnu1k");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color:black;
+  text-shadow: 0.3px 0.3px white;
+  background-size: cover;
+  height: 100%;
+ width: 100%;
 }
 
 .year1960font {
   font-family: 'Mystery Quest', cursive;
+  color: rgb(179, 0, 74);
+  text-shadow: 1px 1px darkred;
 }
 
 .year1970 {
-  background-color: darksalmon;
+  background-image: url("https://source.unsplash.com/C8lJ6WE5RNw");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
+  background-size: cover;
+  height: 100%;
+ width: 100%;
   
 }
 
 .year1970font {
   font-family: 'Monoton', cursive;
+  text-shadow:1px 1px black;
+  color: white;
 }
 
 .year1980 {
-  background-color: darkgreen;
+  background-image: url("https://source.unsplash.com/7r8eYPAzONs");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:black;
+  text-shadow: 0.3px 0.3px 	#a33fd4;
+  background-size: cover;
+  height: 100%;
+ width: 100%;
  }
 
 .year1980font {
   font-family: 'Audiowide', cursive;
-  color: blue;
+  color: rgb(255,72,196);
+  text-shadow: 2px 2px black;
 }
 
 .year1990 {
- background-color: crimson;
+  background-image: url("https://source.unsplash.com/rlbG0p_nQOU");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+ 
+  background-size: cover;
+ height: 100%;
+ width: 100%;
+
  
 }
 
 .year1990font {
   font-family: 'Libre Barcode 128 Text', cursive;
+  background-color: black;
+  color:white;
 }
 
 .year2000 {
-  background-color: papayawhip;
+  background-image: url("https://source.unsplash.com/A56f9_DtvG8");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  color: white;
+  text-shadow: 0.5px 0.5px 	black;
+    background-size: cover;
+    height: 100%;
+ width: 100%;
 }
 
 .year2000font{
@@ -142,16 +254,25 @@ background-color: cyan;
 }
 
 .year2010 {
-  background-color: rebeccapurple;
+  background-image: url("https://source.unsplash.com/ZhQCZjr9fHo");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  color: black;
+    background-size: cover;
+    height: 100%;
+ width: 100%;
 }
 
 .year2010font{
   font-family: 'Major Mono Display', monospace;
+  color: white;
+  text-shadow:1px 1px black;
 }
 
 .year2020 {
   background-color: black;
-  color:white;
+  color:black;
 }
 
 .year2020font {
@@ -166,8 +287,8 @@ background-color: cyan;
   border-width: 2px;
   background-color:#CC6E55;
   border-radius: 10px;
-  padding: 1rem;
   box-shadow: 2px 2px 5px;
+  margin-bottom: 1rem;
 }
 
  a {
@@ -180,15 +301,23 @@ p {
   border-bottom: 1px black solid;
   
 } */
-/* .musicList {
-  display:grid;
+.musicList {
+
+/*   background: rgba(224, 76, 76, 0.651); */
+/*   display:grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-left:2rem;
-  margin-right: 2rem;
-} */
+  margin-right: 2rem; */
+}
 
+.noList {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  background: rgba(155, 153, 153, 0.74);
+  border: solid black 1px;
+padding: 1rem;
 
-  
-  
+ 
 
+}

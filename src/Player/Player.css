@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.songs {
+    width: 28vh;
+    margin: 0.7rem;
+    background: rgba(255, 255, 255, 0.863);
+    padding: 0.7rem;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid black;
+    color: black;
+ 
+}
+.link-icon {
+    margin-left: 0.5rem;
+    font-size: smaller;
+    color: rgb(30, 215, 96);
+   
+}
+
+.imagelist, iframe {
+      width: 100%;
+      border: 1px solid black;
+}
+.imagelist {
+    margin-bottom: 1rem;
+
+}
+
+/* iframe {
+    border:none;
+    border-radius: 3px;
+   padding-bottom: 10px;
+    background: black;
+} */
+
+/* .songlist {
+    padding: 1rem;
+} */
+
+.artist  {
+    font-size: 1.2rem;
+}
+.sample, .noSample {
+    font-size: 1rem;
+    position: absolute; 
+    bottom: 1rem;
+
+}
+
+.noSample {
+    border: solid 1px black;
+    font-size: 20px;
+  
+}
+
+.songlink {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.spotify-link {
+    color: rgb(20, 160, 69);
+}
+
+.spotify-link:hover {
+     background: rgba(0, 0, 0, 0.473);
+     border-radius: 3px;
+     padding: 2px;
+     color: rgb(30, 215, 96);
+}
+
+
+/* .songlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+} */
+    
+.songlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.sample {
+    position: absolute; 
+    bottom: 1rem;
+}
+
+
