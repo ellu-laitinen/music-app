@@ -4,7 +4,7 @@ import "./Player.css";
 import { faFrown, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Player = ({ trackList, artist, image, link, songLink }) => {
+const Player = ({ trackList, artist, image, link, embeddedSong }) => {
 
   return (
     <div className="songs">
@@ -14,13 +14,12 @@ const Player = ({ trackList, artist, image, link, songLink }) => {
 
       <p className="songlink"><a className="spotify-link" target="_blank" rel="noopener noreferrer" href={link}>Listen in Spotify<FontAwesomeIcon className="link-icon" icon={faExternalLinkAlt} /></a> </p>
       <div>
-        <p className="sample">30 sec sample:</p>
+        <p className="sample">Listen:</p>
         <div className="">
-          {songLink === null ? (
-            <div className="noSample"> No sample available  <FontAwesomeIcon className="icon" icon={faFrown} /></div>
+          {embeddedSong === null ? (
+            <div className="noSample"> Playback not available  <FontAwesomeIcon className="icon" icon={faFrown} /></div>
           ) :
-            <iframe id="sample" src={songLink} title="Spotify play button" width="300" height="80"
-            ></iframe>
+          <iframe src={embeddedSong} title="Spotify embedded song" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           }
         </div>
       </div>
