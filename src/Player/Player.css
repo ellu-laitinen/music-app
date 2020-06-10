@@ -1,19 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .songs {
-    width: 27vh;
-    height: 100%;
-    margin: 1rem;
-    background: white;
-    padding: 1rem;
+    width: 28vh;
+    margin: 0.7rem;
+    background: rgba(255, 255, 255, 0.863);
+    padding: 0.7rem;
     display: inline-block;
     vertical-align: top;
     border-radius: 10px;
     font-family: 'Open Sans', sans-serif;
     border: 1px solid black;
     color: black;
-    min-height: 45rem;
-    position:relative;
+ 
 }
 .link-icon {
     margin-left: 0.5rem;

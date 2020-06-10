@@ -61,6 +61,7 @@ const SearchMusic = () => {
                             })}
                             link={i.external_urls.spotify}
                             songLink={i.preview_url}
+                            embeddedSong={`https://open.spotify.com/embed/track/${i.id}`}
                         ></Player>
                     )
                 });
