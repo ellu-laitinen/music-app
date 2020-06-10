@@ -6,7 +6,7 @@ import Player from "../Player/Player";
 import Select from '../Select/Select'
 import "./SearchMusic.css";
 
-import { faMusic, faRecordVinyl, faHeadphones, faCompactDisc } from "@fortawesome/free-solid-svg-icons";
+import { faMusic } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SearchMusic = () => {
@@ -54,6 +54,7 @@ const SearchMusic = () => {
                         <Player
                             key={i.id}
                             trackList={i.name}
+                            album={i.album.name}
                             image={i.album.images[1].url}
                             artist={i.artists.map((b) => {
                                 return b.name
@@ -64,7 +65,7 @@ const SearchMusic = () => {
                     )
                 });
                 if (data.tracks.items.length === 0) {
-                    trackList = <p>No results available, try another year or genre!</p>
+                    trackList = <p className="noList">No results available, try another year or genre!</p>
                 }
                 setTracks(trackList);
             },

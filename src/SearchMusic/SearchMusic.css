@@ -19,7 +19,7 @@
 .App {
   text-align: center;
   background-color:#E4E0C7;
-  height: 100vh;
+  min-height: 100vh;
   border: black solid 1px;
 
   background-size: cover;
@@ -265,8 +265,8 @@ h1 {
   border-width: 2px;
   background-color:#CC6E55;
   border-radius: 10px;
-  padding: 1rem;
   box-shadow: 2px 2px 5px;
+  margin-bottom: 1rem;
 }
 
  a {
@@ -279,10 +279,23 @@ p {
   border-bottom: 1px black solid;
   
 } */
-/* .musicList {
-  display:grid;
+.musicList {
+
+/*   background: rgba(224, 76, 76, 0.651); */
+/*   display:grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-left:2rem;
-  margin-right: 2rem;
-} */
+  margin-right: 2rem; */
+}
+
+.noList {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  background: rgba(155, 153, 153, 0.74);
+  border: solid black 1px;
+padding: 1rem;
+
+ 
+
+}
