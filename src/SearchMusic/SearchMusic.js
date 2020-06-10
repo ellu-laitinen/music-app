@@ -5,8 +5,8 @@ import hash from "../hash";
 import Player from "../Player/Player";
 import Select from '../Select/Select'
 import "./SearchMusic.css";
-
-import { faMusic, faRecordVinyl, faHeadphones, faCompactDisc } from "@fortawesome/free-solid-svg-icons";
+import { faMusic } from "@fortawesome/free-solid-svg-icons";
+// import { faMusic, faRecordVinyl, faHeadphones, faCompactDisc } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SearchMusic = () => {
@@ -92,12 +92,15 @@ const SearchMusic = () => {
             </div>
             {_token && (
                 <div>
+                    <div>
+                        <div className="searchArea">
                     <Select></Select>
                     <button className="btn" onClick={searchYear}>
                         Get your playlist!
               </button>
-                    <div className="enjoyBanner">
-                        <p>{textLine}</p>
+                    
+                        <p className="enjoyBanner">{textLine}</p>
+                       </div>
                         <div className="musicList">
                             <div>
                                 {trackList}
