@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .songs {
-    width: 25vh;
-    height: 100%st;
-    margin: 1rem;
+    width: 28vh;
+    margin: 0.7rem;
     background: rgb(255, 255, 255);
-    padding: 1rem;
+    padding: 0.7rem;
     display: inline-block;
     vertical-align: top;
     border-radius: 10px;
@@ -31,8 +30,6 @@
 iframe {
     border:none;
     border-radius: 3px;
-   padding-bottom: 10px;
-    background: black;
 }
 
 /* .songlist {

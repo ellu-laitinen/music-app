@@ -6,8 +6,8 @@ import Player from "../Player/Player";
 import Select from '../Select/Select'
 import "./SearchMusic.css";
 
-import { faMusic, faRecordVinyl, faHeadphones, faCompactDisc } from "@fontawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faMusic, faRecordVinyl, faHeadphones, faCompactDisc } from "@fontawesome/free-solid-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SearchMusic = () => {
     const [_token, setToken] = useState(undefined);
@@ -76,7 +76,6 @@ const SearchMusic = () => {
         <div className={`App ${yearStyle}`}>
             <div className="login-page">
                 <h1 className={`login ${yearStyle}font`}>
-                    <FontAwesomeIcon className="icon" icon={faMusic} />
                    Music From My Year
                     </h1>
                 {!_token && (

@@ -1,7 +1,12 @@
 .searchContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: flex;  
+  flex-wrap: wrap;
+  justify-content: center;
     margin: 2rem;
-  
+}
+
+
+select, input {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
 }
