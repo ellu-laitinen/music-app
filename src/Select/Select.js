@@ -5,7 +5,7 @@ const Select = () => {
     return (
         <div>
 
-            <h3>Search bar thingy stuff here</h3>
+            <h3>Ready to discover awesome music? </h3>
             <div className="searchContainer">
                 <p>Select year <input type="number" id="year" defaultValue="1990" min="1900" max="2030"></input></p>
                 <p>Select genre <select id="genre">

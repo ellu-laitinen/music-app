@@ -19,7 +19,10 @@
 
 .App {
   text-align: center;
-  background-color:#F9D46C;
+  /* background-color:rgba(86, 141, 172, 0.7); */
+  /* background-color: #E4E0C7; */
+  background-color: rgba(249, 211, 108, 0.808);
+  /* background-color: rgba(250, 164, 88, 0.801); */
   min-height: 100vh;
   border: black solid 1px;
 
@@ -52,9 +55,32 @@ h1 {
 .year1860, .year1870, .year1880, .year1890 {
   background-color: darkgoldenrod;
 } */
+.sloganContainer {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: flex; */
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  
+}
+
+.sloganLine {
+  
+  text-align: center;  
+  display: inline-block;
+}
+img{
+  display: block;
+  height: 8rem;
+  margin-right: auto;
+ margin-left: auto;
+  
+  
+}
 
 .searchArea {
-  background-color: rgb(243, 240, 240, 0.5);
+  background-color: rgb(243, 240, 240, 0.6);
   /* width: fit-content; */
   padding: 1.5rem;
  margin-left: 10%;
@@ -67,16 +93,26 @@ h1 {
   border-style: solid;
   border-color: rgb(20, 20, 20);
   border-width: 2px;
-  background-color:#CC6E55;
+ background-color: #CC6E55;
+  /* background-color: #FAA458; */
   border-radius: 10px;
   box-shadow: 2px 2px 5px;
   margin-bottom: 1rem;
+  outline:none;
+}
+
+.btn:active,
+.btn:focus {
+  background-color:rgb(248, 124, 82) ;
+  border-color: rgb(36, 35, 35);
+  outline:0px none transparent;
+  box-shadow: 2px 2px 5px black;
 }
 
  a {
   text-decoration: none;
   color: rgb(20, 20, 20);
-
+display: block;
 }
 
 .year1900{
@@ -85,8 +121,8 @@ h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color:white;
-  text-shadow: 1px 1px black;
+  /* color:white;
+  text-shadow: 1px 1px black; */
   font-weight: bold;
   height: 100%;
  width: 100%;
@@ -103,9 +139,9 @@ h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color:white;
+  /* color:white; */
   font-weight: bold;
-  text-shadow: 1px 0.5px black;
+  /* text-shadow: 1px 0.5px black; */
   /* background-size: cover; */
   height: 100%;
  width: 100%;
@@ -122,7 +158,7 @@ h1 {
   background-attachment: fixed;
   background-position: top;
   color:black;
-  text-shadow: 0.5px 0.5px goldenrod;
+  /* text-shadow: 0.5px 0.5px goldenrod; */
   font-weight: bold;
   background-size: cover;
   height: 100%;
@@ -139,7 +175,7 @@ h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color:white;
+  /* color:white; */
   background-size: cover;
   height: 100%;
  width: 100%;
@@ -156,7 +192,7 @@ h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color:black;
+  font-weight: bold;
   background-size: cover;
   height: 100%;
  width: 100%;
@@ -265,8 +301,7 @@ h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
-  color: white;
-  text-shadow: 1px 1px 	black;
+ 
   font-weight: bold;
     background-size: cover;
     height: 100%;
@@ -275,6 +310,7 @@ h1 {
 
 .year2000font{
   font-family: 'Sedgwick Ave Display', cursive;
+  color:white;
 }
 
 .year2010 {
@@ -298,7 +334,7 @@ h1 {
 .year2020 {
   background-color: black;
   color:black;
-  font-weight: bold;
+  
 }
 
 .year2020font {
@@ -307,20 +343,7 @@ h1 {
 }
 
 
-/* 
-p {
-  border-bottom: 1px black solid;
-  
-} */
-.musicList {
 
-/*   background: rgba(224, 76, 76, 0.651); */
-/*   display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  margin-left:2rem;
-  margin-right: 2rem; */
-}
 
 .noList {
   margin-top: 2rem;
