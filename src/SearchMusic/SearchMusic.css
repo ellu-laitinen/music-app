@@ -298,30 +298,26 @@ h1 {
  a {
   text-decoration: none;
   color: rgb(20, 20, 20);
-
 }
-/* 
-p {
-  border-bottom: 1px black solid;
-  
-} */
-.musicList {
 
-/*   background: rgba(224, 76, 76, 0.651); */
-/*   display:grid;
+/* p {
+  border-bottom: 1px black solid;
+} */
+
+
+/*.musicList {
+  background: rgba(224, 76, 76, 0.651);
+  display:grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-left:2rem;
-  margin-right: 2rem; */
-}
+  margin-right: 2rem; 
+}*/
 
 .noList {
   margin-top: 2rem;
   font-size: 1.6rem;
   background: rgba(155, 153, 153, 0.74);
   border: solid black 1px;
-padding: 1rem;
-
- 
-
+  padding: 1rem;
 }
