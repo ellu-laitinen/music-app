@@ -46,6 +46,10 @@ h1 {
  
 }
 
+.enjoyBanner {
+  margin: 1rem;
+}
+
 /* .year1800, .year1810, .year1820, .year1830, .year1840, .year1850 {
   background-color: darkblue;
 }
