@@ -1,7 +1,7 @@
 import React from "react";
 import "./Player.css";
 
-import { faFrown, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Player = ({ trackList, artist, image, link, songLink, album, embeddedSong }) => {
