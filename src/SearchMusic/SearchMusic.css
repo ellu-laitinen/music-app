@@ -70,6 +70,7 @@ h1 {
   text-align: center;  
   display: inline-block;
 }
+
 img{
   display: block;
   height: 8rem;
@@ -114,6 +115,11 @@ img{
   color: rgb(20, 20, 20);
 display: block;
 }
+
+.enjoyBanner {
+  margin: 1rem;
+}
+
 
 .year1900{
   
