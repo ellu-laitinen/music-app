@@ -81,15 +81,21 @@ const SearchMusic = () => {
                     <FontAwesomeIcon className="icon" icon={faMusic} />
                    Music From My Year
                     </h1>
-                {!_token && (
+                {!_token && (<div>
+                    <div className="sloganContainer">
+                    <img src="vinyl.png" alt="Drawing of a vinyl record" className="vinylLogo"></img>
+                    <p className="sloganLine">Ever wonder what your grandparents listened to when they were teenagers? <br></br>
+                    What was music like when you were born? <br></br> Find out with Music From My Year! <br></br> Start by clicking the button!</p>
+                    </div>
                     <a
-                        className="btn btn--loginApp-link"
+                        className="btn"
                         href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
                             "%20"
                         )}&response_type=token&show_dialog=true`}
                     >
                         Login to Spotify
                     </a>
+                    </div>
                 )}
             </div>
             {_token && (
