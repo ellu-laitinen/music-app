@@ -45,7 +45,7 @@
 
 h1 {
   font-family: 'Handlee', cursive;
-  margin: 5rem;
+  margin: 5rem 5rem 3rem 5rem;
  
 }
 
@@ -59,7 +59,6 @@ h1 {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  /* display: flex; */
   justify-content: space-evenly;
   margin-bottom: 2rem;
   
@@ -76,6 +75,7 @@ h1 {
   height: 8rem;
   margin-right: auto;
  margin-left: auto;
+ margin-bottom: 1.5rem;
   
   
 }
@@ -127,11 +127,9 @@ display: block;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  /* color:white;
-  text-shadow: 1px 1px black; */
   font-weight: bold;
   height: 100%;
- width: 100%;
+  width: 100%;
   
 }
 
@@ -145,12 +143,9 @@ display: block;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  /* color:white; */
   font-weight: bold;
-  /* text-shadow: 1px 0.5px black; */
-  /* background-size: cover; */
   height: 100%;
- width: 100%;
+  width: 100%;
  
 }
 
@@ -164,11 +159,10 @@ display: block;
   background-attachment: fixed;
   background-position: top;
   color:black;
-  /* text-shadow: 0.5px 0.5px goldenrod; */
   font-weight: bold;
   background-size: cover;
   height: 100%;
- width: 100%;
+  width: 100%;
 }
 
 .year1920font{
@@ -181,10 +175,9 @@ display: block;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  /* color:white; */
   background-size: cover;
   height: 100%;
- width: 100%;
+  width: 100%;
 
 }
 
@@ -201,7 +194,7 @@ display: block;
   font-weight: bold;
   background-size: cover;
   height: 100%;
- width: 100%;
+  width: 100%;
 }
 
 .year1940font {
@@ -219,7 +212,7 @@ display: block;
   text-shadow: 0.3px 0.3px white;
   background-size: cover;
   height: 100%;
- width: 100%;
+  width: 100%;
   
 
 }
@@ -238,7 +231,7 @@ display: block;
   text-shadow: 0.3px 0.3px white;
   background-size: cover;
   height: 100%;
- width: 100%;
+  width: 100%;
 }
 
 .year1960font {
@@ -255,7 +248,7 @@ display: block;
   font-weight: bold;
   background-size: cover;
   height: 100%;
- width: 100%;
+  width: 100%;
   
 }
 
@@ -274,7 +267,7 @@ display: block;
   font-weight: bold;
   background-size: cover;
   height: 100%;
- width: 100%;
+  width: 100%;
  }
 
 .year1980font {
@@ -290,8 +283,8 @@ display: block;
   background-position: top;
  font-weight: bold;
   background-size: cover;
- height: 100%;
- width: 100%;
+  height: 100%;
+  width: 100%;
 
  
 }
@@ -307,11 +300,10 @@ display: block;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
- 
   font-weight: bold;
-    background-size: cover;
-    height: 100%;
- width: 100%;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .year2000font{
@@ -326,9 +318,9 @@ display: block;
   background-position: top;
   color: black;
   font-weight: bold;
-    background-size: cover;
-    height: 100%;
- width: 100%;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .year2010font{
@@ -356,7 +348,7 @@ display: block;
   font-size: 1.6rem;
   background: rgba(155, 153, 153, 0.74);
   border: solid black 1px;
-padding: 1rem;
+  padding: 1rem;
 
  
 
