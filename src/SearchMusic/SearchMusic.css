@@ -19,22 +19,10 @@
 
 .App {
   text-align: center;
-  /* background-color:rgba(86, 141, 172, 0.7); */
-  /* background-color: #E4E0C7; */
   background-color: rgba(249, 211, 108, 0.808);
-  /* background-color: rgba(250, 164, 88, 0.801); */
   min-height: 100vh;
   border: black solid 1px;
-
   background-size: cover;
-  
-  
-
- /*  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin); */
   color: rgb(20, 20, 20);
 }
 
@@ -74,19 +62,18 @@ h1 {
   display: block;
   height: 8rem;
   margin-right: auto;
- margin-left: auto;
- margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
   
   
 }
 
 .searchArea {
   background-color: rgb(243, 240, 240, 0.6);
-  /* width: fit-content; */
   padding: 1.5rem;
- margin-left: 10%;
- margin-right: 10%;
- border-radius: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 5px;
 }
 
 
@@ -94,20 +81,25 @@ h1 {
   border-style: solid;
   border-color: rgb(20, 20, 20);
   border-width: 2px;
- background-color: #CC6E55;
-  /* background-color: #FAA458; */
+  background-color: #CC6E55;
   border-radius: 10px;
   box-shadow: 2px 2px 5px;
   margin-bottom: 1rem;
   outline:none;
 }
 
-.btn:active,
+
 .btn:focus {
+  
+  border-color: rgb(36, 35, 35);
+  box-shadow: 2px 2px 5px #964e3b; 
+}
+
+.btn:active,
+.btn:hover{
   background-color:rgb(248, 124, 82) ;
   border-color: rgb(36, 35, 35);
-  outline:0px none transparent;
-  box-shadow: 2px 2px 5px black;
+ 
 }
 
  a {
@@ -120,6 +112,15 @@ display: block;
   margin: 1rem;
 }
 
+.noList {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  background: rgba(155, 153, 153, 0.74);
+  border: solid black 1px;
+  padding: 1rem;
+}
+
+/* Decade specific styling */
 
 .year1900{
   
@@ -151,6 +152,7 @@ display: block;
 
 .year1910font {
   font-family: 'Alegreya Sans SC', sans-serif;
+  color: white;
 }
 
 .year1920{
@@ -237,7 +239,7 @@ display: block;
 .year1960font {
   font-family: 'Mystery Quest', cursive;
   color: rgb(179, 0, 74);
-  text-shadow: 1px 1px darkred;
+  font-weight: bold;
 }
 
 .year1970 {
@@ -281,7 +283,7 @@ display: block;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
- font-weight: bold;
+  font-weight: bold;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -343,13 +345,4 @@ display: block;
 
 
 
-.noList {
-  margin-top: 2rem;
-  font-size: 1.6rem;
-  background: rgba(155, 153, 153, 0.74);
-  border: solid black 1px;
-  padding: 1rem;
 
- 
-
-}

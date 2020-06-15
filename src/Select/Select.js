@@ -7,8 +7,8 @@ const Select = () => {
 
             <h3>Ready to discover awesome music? </h3>
             <div className="searchContainer">
-                <p>Select a year<input type="number" id="year" defaultValue="1990" min="1900" max="2030"></input></p>
-                <p>Select a genre<select id="genre">
+                <label for="year">Select a year<input type="number" id="year" defaultValue="1990" min="1900" max="2030"></input></label>
+                <label for="genre">Select a genre<select id="genre">
                     <option value="">All genres</option>
                     <option value="%20genre:ambient">Ambient</option>
                     <option value="%20genre:black-metal">Black-metal</option>
@@ -35,21 +35,22 @@ const Select = () => {
                     <option value="%20genre:pop">Pop</option>
                     <option value="%20genre:punk">Punk</option>
                     <option value="%20genre:reggae">Reggae</option>
+                    <option value="%20genre:reggaeton">Reggaeton</option>
                     <option value="%20genre:rock">Rock</option>
                     <option value="%20genre:salsa">Salsa</option>
                     <option value="%20genre:samba">Samba</option>
                     <option value="%20genre:soul">Soul</option>
                     <option value="%20genre:tango">Tango</option>
                     <option value="%20genre:techno">Techno</option>
-                </select></p>
+                </select></label>
 
-                <p>Number of songs <select id="limit">
+                <label for="limit">Number of songs <select id="limit">
                     <option value="10">10</option>
                     <option value="20">20</option>
                     <option value="30">30</option>
                     <option value="40">40</option>
                     <option value="50">50</option>
-                </select></p>
+                </select></label>
             </div>
         </div>
     );
