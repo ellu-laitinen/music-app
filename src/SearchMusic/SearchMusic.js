@@ -110,7 +110,7 @@ const SearchMusic = () => {
                             <p className="enjoyBanner">{textLine}</p>
                         </div>
                         <div className="musicList">
-                            <div>
+                            <div >
                                 {trackList}
                             </div>
                         </div>
