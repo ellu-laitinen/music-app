@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { authEndpoint, clientId, redirectUri, scopes } from "../config";
+import { authEndpoint, clientId, redirectUri, scopes } from "../Config";
 import $ from "jquery";
 import hash from "../hash";
 import Player from "../Player/Player";
@@ -83,8 +83,8 @@ const SearchMusic = () => {
                     </h1>
                 {!_token && (<div>
                     <div className="sloganContainer">
-                    <img src="vinyl.png" alt="Drawing of a vinyl record" className="vinylLogo"></img>
-                    <p className="sloganLine">Ever wonder what your grandparents listened to when they were teenagers? <br></br>
+                        <img src="vinyl.png" alt="Drawing of a vinyl record" className="vinylLogo"></img>
+                        <p className="sloganLine">Ever wonder what your grandparents listened to when they were teenagers? <br></br>
                     What was music like when you were born? <br></br> Find out with Music From My Year! <br></br> Start by clicking the button!</p>
                     </div>
                     <a
@@ -95,7 +95,7 @@ const SearchMusic = () => {
                     >
                         Login to Spotify
                     </a>
-                    </div>
+                </div>
                 )}
             </div>
             {_token && (
