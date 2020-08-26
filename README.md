@@ -1,6 +1,6 @@
 Summer Project 2020, Helsinki Business College. End of first 5-month semester.
 
-Music From My Year is a React App that uses Spotify API.
+Music From My Year is a React App that uses Spotify API. The user can select the year, genre and the amount of results they want to get. Background image and title font change with each decade.
 
 Time spent on project: 3,5 weeks.
 
