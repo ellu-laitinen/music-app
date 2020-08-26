@@ -6,6 +6,8 @@ Time spent on project: 3,5 weeks.
 
 Team members: Elisabet Laitinen (https://github.com/ellu-laitinen), Laura Pohjanpalo (https://github.com/lapohjan), Katariina Vuorinen ( https://github.com/kata-v).
 
+http://lauratellervo.fi/mymusic/#
+
 ![Landing page](my-music1.png)
 ![First search view](my-music2.png)
 ![Results view, example 1](my-music3.png)
